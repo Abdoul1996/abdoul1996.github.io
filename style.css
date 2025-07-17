@@ -1,54 +1,108 @@
-body {
-       margin: 0;
-       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       background-color: #fff;
-       color:  #111;
-     }
-     
-     nav {
-       background-color: #fff;
-       padding: 10px 0;
+
+nav {
+       background-color: #2b2b2b;
+       padding: 15px 0;
        text-align: center;
+       width: 100%;
      }
      
      nav ul {
-       margin: 0;
-       padding: 0;
-       list-style-type: none;
        display: flex;
        justify-content: center;
        flex-wrap: wrap;
+       list-style: none;
+       margin: 0;
+       padding: 0;
      }
      
      nav ul li {
-       margin: 0 15px;
+       margin: 0 20px;
      }
      
      nav ul li a {
-       color: #ffffff;
+       color: #fff;
        text-decoration: none;
        font-weight: bold;
+       font-size: 16px;
+     }
+     .leadership-list {
+       list-style-type: disc;
+       padding-left: 20px;
+       margin-bottom: 30px;
+     }
+     
+     .leadership-list li {
+       margin-bottom: 10px;
+       line-height: 1.6;
      }
      
      nav ul li a:hover {
        color: #00bfff;
      }
      
-     header {
-       background-color: white;
-       color: black;
+
+.container {
+       max-width: 1100px;
+       margin: 0 auto;
+       padding: 20px;
+}
+     
+.centered {
        text-align: center;
-       padding: 50px 20px;
+       margin: 0 auto;
+}
+     
+.flex-section {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       gap: 40px;
+       align-items: flex-start;
+}
+     
+     .text-content {
+       flex: 1 1 500px;
      }
      
-     header h1 {
-       font-size: 2.5em;
-       margin-bottom: 10px;
+     .image-content {
+       flex: 1 1 300px;
+       text-align: center;
      }
      
-     section {
-       padding: 40px 20px;
-       max-width: 800px;
-       margin: auto;
+     .image-content img {
+       max-width: 100%;
+       border-radius: 8px;
+     }
+     
+     .caption {
+       font-size: 0.9em;
+       color: #555;
+       margin-top: 8px;
+     }
+     
+     .highlight {
+       color: #007BFF;
+       font-weight: bold;
+     }
+
+     .awards-list {
+       list-style-type: disc;
+       padding-left: 20px;
+       margin-bottom: 40px;
+     }
+     
+     .awards-list li {
+       margin-bottom: 16px;
+       line-height: 1.5;
+     }
+     
+     .awards-list .highlight {
+       color: #007BFF;
+       font-weight: 600;
+     }
+     
+     h3 {
+       margin-top: 40px;
+       color: #111;
      }
      
