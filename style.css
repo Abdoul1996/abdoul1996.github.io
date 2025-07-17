@@ -4,41 +4,41 @@ nav {
        padding: 15px 0;
        text-align: center;
        width: 100%;
-     }
+}
      
-     nav ul {
+nav ul {
        display: flex;
        justify-content: center;
        flex-wrap: wrap;
        list-style: none;
        margin: 0;
        padding: 0;
-     }
+}
      
-     nav ul li {
+nav ul li {
        margin: 0 20px;
-     }
+}
      
-     nav ul li a {
+nav ul li a {
        color: #fff;
        text-decoration: none;
        font-weight: bold;
        font-size: 16px;
-     }
-     .leadership-list {
+}
+.leadership-list {
        list-style-type: disc;
        padding-left: 20px;
        margin-bottom: 30px;
-     }
+}
      
-     .leadership-list li {
+.leadership-list li {
        margin-bottom: 10px;
        line-height: 1.6;
-     }
+}
      
-     nav ul li a:hover {
+nav ul li a:hover {
        color: #00bfff;
-     }
+}
      
 
 .container {
@@ -60,19 +60,19 @@ nav {
        align-items: flex-start;
 }
      
-     .text-content {
+.text-content {
        flex: 1 1 500px;
-     }
+}
      
-     .image-content {
+.image-content {
        flex: 1 1 300px;
        text-align: center;
-     }
+}
      
-     .image-content img {
+.image-content img {
        max-width: 100%;
        border-radius: 8px;
-     }
+}
      
      .caption {
        font-size: 0.9em;
