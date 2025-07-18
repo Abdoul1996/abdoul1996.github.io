@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
@@ -20,6 +22,7 @@
     </ul>
   </nav>
 
+  <!-- Header -->
   <header>
     <div class="centered">
       <h1>Abdoulfatah Abdillahi</h1>
@@ -28,6 +31,8 @@
   </header>
 
   <main class="container">
+
+    <!-- About Section -->
     <section id="about" class="flex-section">
       <div class="text-content">
         <p>
@@ -43,156 +48,136 @@
           I also completed an industry internship at <span class="highlight">Genentech</span> in San Francisco, CA, where I worked as a bioinformatics researcher contributing to real-world biomedical data analysis.
         </p>
         <p>
-          When I am not studying or researching, I enjoy going for runs, playing soccer, and chilling with close ones. I also like to visit historical places such as Egypt, Ethiopia.
+          Outside of academics, I enjoy running, playing soccer, and visiting historical places like Egypt and Ethiopia.
         </p>
       </div>
       <div class="image-content">
-        <img src="Abdoul.png" alt="Abdoulfatah Abdillahi" />
-        <p class="caption">Photo of Abdoul — insert caption here</p>
+        <img src="Abdoul.png" alt="Portrait of Abdoulfatah Abdillahi" loading="lazy" />
+        <p class="caption">Photo of Abdoul</p>
+        <div class="social-links">
+          <a href="CV.pdf" class="cv" target="_blank">CV</a> /
+          <a href="https://github.com/Abdoul1996" target="_blank">GitHub</a> /
+          <a href="https://www.linkedin.com/in/abdoulfatah-abdillahi/" target="_blank">LinkedIn</a>
+        </div>
+      
+        <p class="update-date">Last updated: July 2025</p>
       </div>
     </section>
 
+    <!-- Research Section -->
     <section id="research">
-       <h2>Research Experience</h2>
-     
-       <h3>Graduate Student Researcher, San Francisco State University, CA</h3>
-       <p><strong>Advisors:</strong> Dr. Pleuni Pennings & Dr. Sara El Alaouni <br>
-          <span class="highlight">Sep 2023 – Present</span></p>
-       <ul class="research-list">
-         <li>Research Project: <strong>Machine Learning-Driven Pan-genome Pipeline for Drug Resistance Prediction in <em>E. coli</em></strong></li>
-         <li>Preprocessed genomic data using bioinformatics tools (e.g., Fasterq-Dump, Prokka, Roary) to construct gene presence/absence matrices and integrate SNP data.</li>
-         <li>Developed an ML pipeline combining gene presence/absence and SNP features to predict antibiotic resistance.</li>
-         <li>Led a sub-team building and optimizing a Variational Autoencoder (VAE) model that outperformed CNNs in predictive accuracy.</li>
-         <li>Analyzed resistance to Amoxicillin (AMC), with the VAE capturing latent genomic patterns more effectively.</li>
-         <li>Bridged gaps in biological understanding by collaborating with microbiology lab members.</li>
-       </ul>
-     </section>
-     <section id="work">
-       <h2>Work Experience</h2>
-       <h3>Graduate Student Researcher (Paid Stipend), San Francisco State University, CA</h3>
-       <p><span class="highlight">Sep 2023 – Present</span></p>
-       <ul class="work-list">
-         <li>Conducted funded research on machine learning-driven antibiotic resistance prediction in <em>E. coli</em>.</li>
-         <li>Led model development efforts using Variational Autoencoders (VAEs), resulting in improved prediction accuracy.</li>
-         <li>Collaborated across disciplines with biology labs to integrate computational and domain expertise.</li>
-       </ul>
+      <h2>Research Experience</h2>
+      <h3>Graduate Student Researcher, San Francisco State University, CA</h3>
+      <p><strong>Advisors:</strong> Dr. Pleuni Pennings & Dr. Sara El Alaouni<br>
+      <span class="highlight">Sep 2023 – Present</span></p>
+      <ul class="research-list">
+        <li><strong>Machine Learning-Driven Pan-genome Pipeline for Drug Resistance Prediction in <em>E. coli</em></strong></li>
+        <li>Preprocessed genomic data using Fasterq-Dump, Prokka, Roary, etc.</li>
+        <li>Built ML pipeline using gene presence/absence and SNP data.</li>
+        <li>Developed and optimized a Variational Autoencoder (VAE) model.</li>
+        <li>Focused on Amoxicillin resistance with improved latent feature learning.</li>
+        <li>Collaborated with microbiology lab members for interdisciplinary insight.</li>
+      </ul>
     </section>
-     
 
+    <!-- Work Experience Section -->
+    <section id="work">
+      <h2>Work Experience</h2>
+      <h3>Graduate Student Researcher (Paid), SFSU</h3>
+      <p><span class="highlight">Sep 2023 – Present</span></p>
+      <ul class="work-list">
+        <li>Conducted funded research in computational drug resistance prediction.</li>
+        <li>Led VAE-based model development and performance evaluation.</li>
+        <li>Worked with biology faculty and students to bridge technical gaps.</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
       <p>Links and descriptions of your projects.</p>
     </section>
 
+    <!-- Education Section -->
     <section id="education">
-       <h2>Education</h2>
-     
-       <h3>Master of Science in Data Science and AI (DSAI) <span class="highlight">[2024–2025]</span></h3>
-       <p>Department of Computer Science and Engineering (CSE), San Francisco State University (SFSU), San Francisco, CA</p>
-       <p><strong>Notable Courses:</strong></p>
-       <ul>
-         <li>Deep Learning</li>
-         <li>Probability and Statistics I</li>
-         <li>Stat Learning and Data Mining</li>
-         <li>Natural Language Processing</li>
-         <li>Machine Learning</li>
-         <li>Algorithms II</li>
-         <li>Pattern Analysis and Machine Learning</li>
-         <li>Data Visualization</li>
-         <li>Research </li>
-       </ul>
-     
-       <h3>Bachelor of Science in Computer Science (CS) <span class="highlight">[2018–2023]</span></h3>
-       <p>Department of Computer Science and Engineering (CSE), San Francisco State University (SFSU), San Francisco, CA</p>
-       <p><strong>Notable Courses:</strong></p>
-       <ul>
-         <li>Introduction to Computing</li>
-         <li>Intermediate Programming</li>
-         <li>Data Structures</li>
-         <li>Discrete Mathematics</li>
-         <li>Ethics, Communication, and Tools for CS</li>
-         <li>Web Software Development</li>
-         <li>Software Development</li>
-         <li>Programming Methodology</li>
-         <li>Operating System Principles</li>
-         <li>Analysis of Algorithms I & II</li>
-       </ul>
-     </section>
+      <h2>Education</h2>
 
+      <h3>MS in Data Science and AI <span class="highlight">[2024–2025]</span></h3>
+      <p>CSE Department, San Francisco State University (SFSU)</p>
+      <strong>Notable Courses:</strong>
+      <ul>
+        <li>Deep Learning</li>
+        <li>Probability and Statistics I</li>
+        <li>Natural Language Processing</li>
+        <li>Machine Learning</li>
+        <li>Algorithms II</li>
+        <li>Data Visualization</li>
+      </ul>
+
+      <h3>BSc in Computer Science <span class="highlight">[2018–2023]</span></h3>
+      <p>CSE Department, San Francisco State University (SFSU)</p>
+      <strong>Notable Courses:</strong>
+      <ul>
+        <li>Data Structures</li>
+        <li>Web Software Development</li>
+        <li>Operating System Principles</li>
+        <li>Analysis of Algorithms I & II</li>
+      </ul>
+    </section>
+
+    <!-- Awards Section -->
     <section id="awards">
-       <h2>Honors and Awards</h2>
-     
-       <p>I have been blessed with some accolades time to time, thanks to the amazing mentors and peers from whom I learned a lot.</p>
-     
-       <h3>Research and Fellowship Grants</h3>
-       <ul class="awards-list">
-         <li>
-           <strong>NIH – UCSF/SFSU Bridges to the Doctorate Fellowship, SFSU <span class="highlight">(2023–2025)</span></strong><br>
-           Two-year research training fellowship awarded to MS students from underrepresented groups in science to support transition into and completion of biomedical research-focused doctoral programs.
-         </li>
-         <li>
-           <strong>National Diversity in STEM (NDiSTEM) Travel Scholarship, SACNAS, Phoenix, AZ <span class="highlight">(October 2024)</span></strong><br>
-           Received full travel support including roundtrip flight, lodging, and conference registration to attend the 2024 NDiSTEM Conference.
-         </li>
-         <li>
-           <strong>Genentech – PINC Fellowship, SFSU <span class="highlight">(2022–2023)</span></strong><br>
-           Awarded $4,500 to 9 students in the PINC Program for excellence and potential in computational biology and AI.
-         </li>
-       </ul>
-     
-       <h3>University Scholarships</h3>
-       <ul class="awards-list">
-         <li>
-           <strong>BMC Scholarship, SFSU <span class="highlight">(September 2024)</span></strong><br>
-           Awarded $1,750 by the CS Department for academic excellence and commitment to research.
-         </li>
-         <li>
-           <strong>CSU-NSF Louis Stokes Alliance for Minority Participation (CSU-LSAMP), SFSU <span class="highlight">(2022–2023)</span></strong><br>
-           Awarded $500 to support underrepresented students in STEM fields.
-         </li>
-       </ul>
-     
-       <h3>Mentorship and Recognition</h3>
-       <ul class="awards-list">
-         <li>
-           <strong>Award of Recognition, SFSU PINC Program <span class="highlight">(May 2024)</span></strong><br>
-           Recognized for exemplary performance and service to students and faculty, contributing to the success of the PINC community.
-         </li>
-         <li>
-           <strong>Certificate of Appreciation, SFSU PINC Summer Research Program <span class="highlight">(July 2024)</span></strong><br>
-           Acknowledged for outstanding work as a peer mentor, demonstrating leadership and student guidance.
-         </li>
-         <li>
-           <strong>VIR STEM Mentorship Program Participant, SFSU <span class="highlight">(December 2022)</span></strong><br>
-           Selected for strong academic performance and commitment to professional growth in STEM.
-         </li>
-       </ul>
-     </section>
+      <h2>Honors and Awards</h2>
+      <p>Grateful for recognition received from mentors and organizations along the way.</p>
 
-     <section id="leadership">
-       <h2>Leadership</h2>
-     
-       <h2>Monroe Elementary School, San Francisco, CA</h2>
-       <p><strong>Mentor</strong> <span class="highlight">| March 2024 – May 2024</span></p>
-       <ul class="leadership-list">
-         <li>Collaborated with Dr. Pleuni Pennings and lab members to introduce basic coding concepts to 4th grade students through weekly classroom visits.</li>
-         <li>Designed and led engaging projects like interactive name poem games to spark early interest in technology.</li>
-       </ul>
-     
-       <h3>Professional & Community Memberships</h3>
-       <ul class="leadership-list">
-         <li>Member, National Society for the Advancement of Chicanos and Native Americans in Science (SACNAS)</li>
-         <li>Member, Muslim Student Association (MSA)</li>
-         <li>Member, CSU-NSF Louis Stokes Alliance for Minority Participation (CSU-LSAMP)</li>
-         <li>Member, National Society of Black Engineers (NSBE @ SFSU)</li>
-       </ul>
-     </section>
-     
+      <h3>Research & Fellowship Grants</h3>
+      <ul class="awards-list">
+        <li><strong>NIH – UCSF/SFSU Bridges Fellowship</strong> <span class="highlight">(2023–2025)</span></li>
+        <li><strong>NDiSTEM Travel Scholarship (SACNAS)</strong> <span class="highlight">(Oct 2024)</span></li>
+        <li><strong>Genentech – PINC Fellowship</strong> <span class="highlight">(2022–2023)</span></li>
+      </ul>
 
+      <h3>University Scholarships</h3>
+      <ul class="awards-list">
+        <li><strong>BMC Scholarship</strong> <span class="highlight">(Sept 2024)</span></li>
+        <li><strong>CSU-LSAMP Program</strong> <span class="highlight">(2022–2023)</span></li>
+      </ul>
+
+      <h3>Mentorship & Recognition</h3>
+      <ul class="awards-list">
+        <li><strong>PINC Program Recognition Award</strong> <span class="highlight">(May 2024)</span></li>
+        <li><strong>PINC Summer Peer Mentor Certificate</strong> <span class="highlight">(July 2024)</span></li>
+        <li><strong>VIR STEM Mentorship Participant</strong> <span class="highlight">(Dec 2022)</span></li>
+      </ul>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership">
+      <h2>Leadership</h2>
+
+      <h3>Mentor, Monroe Elementary School</h3>
+      <p><span class="highlight">March 2024 – May 2024</span></p>
+      <ul class="leadership-list">
+        <li>Introduced 4th graders to coding through hands-on projects.</li>
+        <li>Created interactive games and led engaging classroom sessions.</li>
+      </ul>
+
+      <h3>Professional & Community Memberships</h3>
+      <ul class="leadership-list">
+        <li>SACNAS</li>
+        <li>Muslim Student Association (MSA)</li>
+        <li>CSU-LSAMP</li>
+        <li>NSBE @ SFSU</li>
+      </ul>
+    </section>
+
+    <!-- Blog Section -->
     <section id="blog">
       <h2>Blog</h2>
       <p>Coming soon!</p>
     </section>
+
   </main>
+
 </body>
 </html>
