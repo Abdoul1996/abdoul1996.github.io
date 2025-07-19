@@ -272,6 +272,15 @@ article {
   font-style: italic;
 }
 
+.conference-details {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+}
+
 .poster-placeholder {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
