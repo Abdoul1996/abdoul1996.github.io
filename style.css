@@ -1,200 +1,650 @@
+/* Mobile-first responsive design */
+* {
+  box-sizing: border-box;
+}
 
 html {
-       scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* Accessibility improvements */
 .skip-link {
-       position: absolute;
-       top: -40px;
-       left: 6px;
-       background: #000;
-       color: white;
-       padding: 8px;
-       text-decoration: none;
-       z-index: 1000;
-       border-radius: 4px;
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
 }
 
 .skip-link:focus {
-       top: 6px;
+  top: 6px;
 }
 
 .visually-hidden {
-       position: absolute !important;
-       width: 1px !important;
-       height: 1px !important;
-       padding: 0 !important;
-       margin: -1px !important;
-       overflow: hidden !important;
-       clip: rect(0, 0, 0, 0) !important;
-       white-space: nowrap !important;
-       border: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
-/* Footer styling */
+/* ======= Navigation ======= */
+nav {
+  background-color: #2b2b2b;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: block;
+}
+
+nav ul li a:hover {
+  color: #00bfff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ======= Header ======= */
+header {
+  background: #f8f9fa;
+  color: #333;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ======= Container & Layout ======= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* ======= Flex Sections ======= */
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.text-content {
+  flex: 1 1 500px;
+}
+
+.image-content {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* ======= Typography & Highlighting ======= */
+.highlight {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 40px 0 20px 0;
+  color: #333;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 10px;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #111;
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+/* ======= Lists ======= */
+.awards-list,
+.leadership-list,
+.work-list,
+.research-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.awards-list li,
+.leadership-list li,
+.work-list li,
+.research-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.social-links {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  margin: 0 4px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.social-links .cv {
+  color: #ff8c00;
+}
+
+.social-links a:not(.cv) {
+  color: #007BFF;
+}
+
+.social-links a:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.update-date {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ======= Sections ======= */
+section {
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+article {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007BFF;
+}
+
+/* ======= Research Section Layout ======= */
+.research-flex {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.research-content {
+  flex: 1;
+}
+
+.research-poster {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.research-poster img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e9ecef;
+}
+
+.poster-caption {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+}
+
+.poster-placeholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster-placeholder:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.poster-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.poster-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.poster-subtext {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  display: block;
+}
+
+.research-details {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-left: 3px solid #007BFF;
+  border-radius: 4px;
+}
+
+.research-details p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.research-details strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* ======= Research Project Styling ======= */
+.research-project {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-left: 4px solid #007BFF;
+}
+
+.project-header {
+  margin-bottom: 20px;
+}
+
+.project-title {
+  color: #1e3a8a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.project-meta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-author {
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.project-status {
+  background: #10b981;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-description {
+  margin-bottom: 20px;
+}
+
+.project-description p {
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.project-details {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 3px solid #007BFF;
+}
+
+.project-details p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.project-details strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.project-details a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-details a:hover {
+  text-decoration: underline;
+}
+
+/* ======= Footer ======= */
 footer {
-       background-color: #f8f9fa;
-       border-top: 1px solid #e9ecef;
-       padding: 20px 0;
-       margin-top: 40px;
-       text-align: center;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
 }
 
 footer p {
-       margin: 0;
-       color: #6c757d;
-       font-size: 14px;
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
 }
 
-nav {
-       position: sticky;
-       top: 0;
-       z-index: 999;
+/* ======= Mobile Responsive Design ======= */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+  }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
-       .flex-section {
-         flex-direction: column;
-         align-items: center;
-       }
-     
-       nav ul {
-         flex-direction: column;
-         gap: 10px;
-       }
-     
-       nav ul li {
-         margin: 10px 0;
-       }
-     }
-     
-/* ======= Base Navigation ======= */
-nav {
-       background-color: #2b2b2b;
-       padding: 15px 0;
-       text-align: center;
-       width: 100%;
-     }
-     
-     nav ul {
-       display: flex;
-       justify-content: center;
-       flex-wrap: wrap;
-       list-style: none;
-       margin: 0;
-       padding: 0;
-     }
-     
-     nav ul li {
-       margin: 0 20px;
-     }
-     
-     nav ul li a {
-       color: #fff;
-       text-decoration: none;
-       font-weight: bold;
-       font-size: 16px;
-       transition: color 0.3s ease;
-     }
-     
-     nav ul li a:hover {
-       color: #00bfff;
-     }
-     
-     /* ======= Container & Layout ======= */
-     .container {
-       max-width: 1100px;
-       margin: 0 auto;
-       padding: 20px;
-     }
-     
-     .centered {
-       text-align: center;
-       margin: 0 auto;
-     }
-     
-     /* ======= Flex Sections ======= */
-     .flex-section {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
-       gap: 40px;
-       align-items: flex-start;
-     }
-     
-     .text-content {
-       flex: 1 1 500px;
-     }
-     
-     .image-content {
-       flex: 1 1 300px;
-       text-align: center;
-     }
-     
-     .image-content img {
-       max-width: 100%;
-       border-radius: 8px;
-     }
-     
-     .caption {
-       font-size: 0.9em;
-       color: #555;
-       margin-top: 8px;
-     }
-     
-     /* ======= Typography & Highlighting ======= */
-     .highlight {
-       color: #007BFF;
-       font-weight: bold;
-     }
-     
-     h3 {
-       margin-top: 40px;
-       color: #111;
-     }
-     
-     /* ======= Lists ======= */
-     .awards-list,
-     .leadership-list {
-       list-style-type: disc;
-       padding-left: 20px;
-       margin-bottom: 40px;
-     }
-     
-     .awards-list li,
-     .leadership-list li {
-       margin-bottom: 16px;
-       line-height: 1.6;
-     }
-     
-     .social-links {
-       margin-top: 10px;
-       font-size: 15px;
-     }
-     
-     .social-links a {
-       text-decoration: none;
-       margin: 0 4px;
-       font-weight: 500;
-     }
-     
-     .social-links .cv {
-       color: #ff8c00; /* orange for CV */
-     }
-     
-     .social-links a:not(.cv) {
-       color: #007BFF; /* blue for other links */
-     }
-     
-     .social-links a:hover {
-       text-decoration: underline;
-     }
-     
-     .update-date {
-       margin-top: 12px;
-       font-size: 14px;
-       color: #333;
-     }
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  .flex-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .text-content,
+  .image-content {
+    flex: 1 1 100%;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+  
+  nav ul li a {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+  
+  header {
+    padding: 40px 15px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin: 30px 0 15px 0;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 25px;
+  }
+  
+  article {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .awards-list,
+  .leadership-list,
+  .work-list,
+  .research-list {
+    padding-left: 15px;
+  }
+  
+  .research-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .research-poster {
+    flex: none;
+    order: -1;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+  
+  .container {
+    padding: 8px;
+  }
+  
+  nav {
+    padding: 10px 0;
+  }
+  
+  nav ul li a {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  header {
+    padding: 30px 10px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 0.9rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    margin: 25px 0 12px 0;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .flex-section {
+    gap: 20px;
+  }
+  
+  .image-content img {
+    max-width: 90%;
+  }
+  
+  article {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .social-links a {
+    margin: 0;
+    padding: 10px 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    min-width: 120px;
+    text-align: center;
+  }
+  
+  .awards-list,
+  .leadership-list,
+  .work-list,
+  .research-list {
+    padding-left: 12px;
+  }
+  
+  .awards-list li,
+  .leadership-list li,
+  .work-list li,
+  .research-list li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+  
+  header h1 {
+    font-size: 1.6rem;
+  }
+  
+  header p {
+    font-size: 0.8rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  .container {
+    padding: 5px;
+  }
+  
+  nav ul li a {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}
      
      
