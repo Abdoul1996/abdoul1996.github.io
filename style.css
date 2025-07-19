@@ -3,6 +3,50 @@ html {
        scroll-behavior: smooth;
 }
 
+/* Accessibility improvements */
+.skip-link {
+       position: absolute;
+       top: -40px;
+       left: 6px;
+       background: #000;
+       color: white;
+       padding: 8px;
+       text-decoration: none;
+       z-index: 1000;
+       border-radius: 4px;
+}
+
+.skip-link:focus {
+       top: 6px;
+}
+
+.visually-hidden {
+       position: absolute !important;
+       width: 1px !important;
+       height: 1px !important;
+       padding: 0 !important;
+       margin: -1px !important;
+       overflow: hidden !important;
+       clip: rect(0, 0, 0, 0) !important;
+       white-space: nowrap !important;
+       border: 0 !important;
+}
+
+/* Footer styling */
+footer {
+       background-color: #f8f9fa;
+       border-top: 1px solid #e9ecef;
+       padding: 20px 0;
+       margin-top: 40px;
+       text-align: center;
+}
+
+footer p {
+       margin: 0;
+       color: #6c757d;
+       font-size: 14px;
+}
+
 nav {
        position: sticky;
        top: 0;

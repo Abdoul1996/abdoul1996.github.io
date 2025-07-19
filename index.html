@@ -3,38 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdoulfatah Abdillahi</title>
+  <meta name="description" content="Abdoulfatah Abdillahi - Computer Science graduate student, researcher, and bioinformatics specialist. Portfolio showcasing research in machine learning and drug resistance prediction." />
+  <meta name="keywords" content="Abdoulfatah Abdillahi, Computer Science, Data Science, Machine Learning, Bioinformatics, Research, SFSU, Genentech" />
+  <meta name="author" content="Abdoulfatah Abdillahi" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Abdoulfatah Abdillahi - Portfolio" />
+  <meta property="og:description" content="Computer Science graduate student and researcher specializing in machine learning and bioinformatics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abdoul1996.github.io" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  
+  <title>Abdoulfatah Abdillahi - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation -->
-  <nav>
+  <nav role="navigation" aria-label="Main navigation">
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#work">Work Experience</a></li>
-      <li><a href="#awards">Honors and Awards</a></li>
-      <li><a href="#leadership">Leadership</a></li>
-      <li><a href="#blog">Blog</a></li>
+      <li><a href="#about" aria-label="Go to About section">About</a></li>
+      <li><a href="#research" aria-label="Go to Research Experience section">Research Experience</a></li>
+      <li><a href="#projects" aria-label="Go to Projects section">Projects</a></li>
+      <li><a href="#education" aria-label="Go to Education section">Education</a></li>
+      <li><a href="#work" aria-label="Go to Work Experience section">Work Experience</a></li>
+      <li><a href="#awards" aria-label="Go to Honors and Awards section">Honors and Awards</a></li>
+      <li><a href="#leadership" aria-label="Go to Leadership section">Leadership</a></li>
+      <li><a href="#blog" aria-label="Go to Blog section">Blog</a></li>
     </ul>
   </nav>
 
   <!-- Header -->
-  <header>
+  <header role="banner">
     <div class="centered">
       <h1>Abdoulfatah Abdillahi</h1>
       <p>Learner, Researcher, Mentor</p>
     </div>
   </header>
 
-  <main class="container">
-
+  <main id="main-content" class="container" role="main">
     <!-- About Section -->
-    <section id="about" class="flex-section">
+    <section id="about" class="flex-section" aria-labelledby="about-heading">
       <div class="text-content">
+        <h2 id="about-heading" class="visually-hidden">About Me</h2>
         <p>
           Hi, I am <span class="highlight">Abdoulfatah Abdillahi</span> (just call me <span class="highlight">Abdoul</span>). I'm originally from East Africa, in <span class="highlight">Djibouti</span>. I am a passionate Computer Science student who enjoys learning new things about technology and research methodologies.
         </p>
@@ -52,132 +67,164 @@
         </p>
       </div>
       <div class="image-content">
-        <img src="Abdoul.png" alt="Portrait of Abdoulfatah Abdillahi" loading="lazy" />
+        <img src="/assets/images/Abdoul.png" alt="Portrait of Abdoulfatah Abdillahi" loading="lazy" />
         <p class="caption">Photo of Abdoul</p>
         <div class="social-links">
-          <a href="CV.pdf" class="cv" target="_blank">CV</a> /
-          <a href="https://github.com/Abdoul1996" target="_blank">GitHub</a> /
-          <a href="https://www.linkedin.com/in/abdoulfatah-abdillahi/" target="_blank">LinkedIn</a>
+          <a href="CV.pdf" class="cv" target="_blank" rel="noopener noreferrer" aria-label="Download CV (opens in new tab)">CV</a> /
+          <a href="https://github.com/Abdoul1996" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile (opens in new tab)">GitHub</a> /
+          <a href="https://www.linkedin.com/in/abdoulfatah-abdillahi/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile (opens in new tab)">LinkedIn</a>
         </div>
-      
         <p class="update-date">Last updated: July 2025</p>
       </div>
     </section>
 
     <!-- Research Section -->
-    <section id="research">
-      <h2>Research Experience</h2>
-      <h3>Graduate Student Researcher, San Francisco State University, CA</h3>
-      <p><strong>Advisors:</strong> Dr. Pleuni Pennings & Dr. Sara El Alaouni<br>
-      <span class="highlight">Sep 2023 – Present</span></p>
-      <ul class="research-list">
-        <li><strong>Machine Learning-Driven Pan-genome Pipeline for Drug Resistance Prediction in <em>E. coli</em></strong></li>
-        <li>Preprocessed genomic data using Fasterq-Dump, Prokka, Roary, etc.</li>
-        <li>Built ML pipeline using gene presence/absence and SNP data.</li>
-        <li>Developed and optimized a Variational Autoencoder (VAE) model.</li>
-        <li>Focused on Amoxicillin resistance with improved latent feature learning.</li>
-        <li>Collaborated with microbiology lab members for interdisciplinary insight.</li>
-      </ul>
+    <section id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research Experience</h2>
+      <article>
+        <h3>Graduate Student Researcher, San Francisco State University, CA</h3>
+        <p><strong>Advisors:</strong> Dr. Pleuni Pennings & Dr. Sara El Alaouni<br>
+        <time datetime="2023-09" class="highlight">Sep 2023 – Present</time></p>
+        <ul class="research-list">
+          <li><strong>Machine Learning-Driven Pan-genome Pipeline for Drug Resistance Prediction in <em>E. coli</em></strong></li>
+          <li>Preprocessed genomic data using Fasterq-Dump, Prokka, Roary, etc.</li>
+          <li>Built ML pipeline using gene presence/absence and SNP data.</li>
+          <li>Developed and optimized a Variational Autoencoder (VAE) model.</li>
+          <li>Focused on Amoxicillin resistance with improved latent feature learning.</li>
+          <li>Collaborated with microbiology lab members for interdisciplinary insight.</li>
+        </ul>
+      </article>
     </section>
 
     <!-- Work Experience Section -->
-    <section id="work">
-      <h2>Work Experience</h2>
-      <h3>Graduate Student Researcher (Paid), SFSU</h3>
-      <p><span class="highlight">Sep 2023 – Present</span></p>
-      <ul class="work-list">
-        <li>Conducted funded research in computational drug resistance prediction.</li>
-        <li>Led VAE-based model development and performance evaluation.</li>
-        <li>Worked with biology faculty and students to bridge technical gaps.</li>
-      </ul>
+    <section id="work" aria-labelledby="work-heading">
+      <h2 id="work-heading">Work Experience</h2>
+      
+      <article>
+        <h3>Graduate Student Researcher (Paid), San Francisco State University, CA</h3>
+        <time datetime="2024-01" class="highlight">Jan 2024 – Present</time>
+        <ul class="work-list">
+          <li>Developed a pipeline to extract gene names from NCBI BLAST results and applied a 5% minor allele frequency threshold to filter SNP features across 15,695 genes, reducing dimensionality and enhancing feature quality for machine learning models.</li>
+          <li>Led a sub-team in developing and evaluating CNN and VAE models on a pangenome dataset to predict antibiotic resistance in E. coli, resulting in the acceptance of our work for presentation at the SACNAS 2024 conference.</li>
+          <li>Overcame gaps in drug resistance knowledge through collaboration with biology researchers, enhancing the biological relevance of machine learning models.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Bioinformatics Researcher, Genentech, San Francisco, CA</h3>
+        <time datetime="2023-06" class="highlight">June 2023 - Sep 2023</time>
+        <ul class="work-list">
+          <li>Preprocessed and analyzed 150 synthetic patient trajectories simulating pharmacokinetic/pharmacodynamic (PK/PD) responses across multiple dose levels by addressing stochastic variability and ensuring balanced train-test splits(70:30), enabling effective training of neural SDE models for treatment effect prediction.</li>
+          <li>Reduced data preprocessing time by implementing parallel processing across HPC nodes using job scheduling, significantly improving training throughput and enabling faster iteration cycles for neural SDE model development.</li>
+        </ul>
+      </article>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
       <p>Links and descriptions of your projects.</p>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
 
-      <h3>MS in Data Science and AI <span class="highlight">[2024–2025]</span></h3>
-      <p>CSE Department, San Francisco State University (SFSU)</p>
-      <strong>Notable Courses:</strong>
-      <ul>
-        <li>Deep Learning</li>
-        <li>Probability and Statistics I</li>
-        <li>Natural Language Processing</li>
-        <li>Machine Learning</li>
-        <li>Algorithms II</li>
-        <li>Data Visualization</li>
-      </ul>
+      <article>
+        <h3>MS in Data Science and AI <time datetime="2024" class="highlight">[2024–2025]</time></h3>
+        <p>CSE Department, San Francisco State University (SFSU)</p>
+        <strong>Notable Courses:</strong>
+        <ul>
+          <li>Deep Learning</li>
+          <li>Probability and Statistics I</li>
+          <li>Natural Language Processing</li>
+          <li>Machine Learning</li>
+          <li>Algorithms II</li>
+          <li>Data Visualization</li>
+        </ul>
+      </article>
 
-      <h3>BSc in Computer Science <span class="highlight">[2018–2023]</span></h3>
-      <p>CSE Department, San Francisco State University (SFSU)</p>
-      <strong>Notable Courses:</strong>
-      <ul>
-        <li>Data Structures</li>
-        <li>Web Software Development</li>
-        <li>Operating System Principles</li>
-        <li>Analysis of Algorithms I & II</li>
-      </ul>
+      <article>
+        <h3>BSc in Computer Science <time datetime="2018" class="highlight">[2018–2023]</time></h3>
+        <p>CSE Department, San Francisco State University (SFSU)</p>
+        <strong>Notable Courses:</strong>
+        <ul>
+          <li>Data Structures</li>
+          <li>Web Software Development</li>
+          <li>Operating System Principles</li>
+          <li>Analysis of Algorithms I & II</li>
+        </ul>
+      </article>
     </section>
 
     <!-- Awards Section -->
-    <section id="awards">
-      <h2>Honors and Awards</h2>
+    <section id="awards" aria-labelledby="awards-heading">
+      <h2 id="awards-heading">Honors and Awards</h2>
       <p>Grateful for recognition received from mentors and organizations along the way.</p>
 
-      <h3>Research & Fellowship Grants</h3>
-      <ul class="awards-list">
-        <li><strong>NIH – UCSF/SFSU Bridges Fellowship</strong> <span class="highlight">(2023–2025)</span></li>
-        <li><strong>NDiSTEM Travel Scholarship (SACNAS)</strong> <span class="highlight">(Oct 2024)</span></li>
-        <li><strong>Genentech – PINC Fellowship</strong> <span class="highlight">(2022–2023)</span></li>
-      </ul>
+      <article>
+        <h3>Research & Fellowship Grants</h3>
+        <ul class="awards-list">
+          <li><strong>NIH – UCSF/SFSU Bridges Fellowship</strong> <time datetime="2023" class="highlight">(2023–2025)</time></li>
+          <li><strong>NDiSTEM Travel Scholarship (SACNAS)</strong> <time datetime="2024-10" class="highlight">(Oct 2024)</time></li>
+          <li><strong>Genentech – PINC Fellowship</strong> <time datetime="2022" class="highlight">(2022–2023)</time></li>
+        </ul>
+      </article>
 
-      <h3>University Scholarships</h3>
-      <ul class="awards-list">
-        <li><strong>BMC Scholarship</strong> <span class="highlight">(Sept 2024)</span></li>
-        <li><strong>CSU-LSAMP Program</strong> <span class="highlight">(2022–2023)</span></li>
-      </ul>
+      <article>
+        <h3>University Scholarships</h3>
+        <ul class="awards-list">
+          <li><strong>BMC Scholarship</strong> <time datetime="2024-09" class="highlight">(Sept 2024)</time></li>
+          <li><strong>CSU-LSAMP Program</strong> <time datetime="2022" class="highlight">(2022–2023)</time></li>
+        </ul>
+      </article>
 
-      <h3>Mentorship & Recognition</h3>
-      <ul class="awards-list">
-        <li><strong>PINC Program Recognition Award</strong> <span class="highlight">(May 2024)</span></li>
-        <li><strong>PINC Summer Peer Mentor Certificate</strong> <span class="highlight">(July 2024)</span></li>
-        <li><strong>VIR STEM Mentorship Participant</strong> <span class="highlight">(Dec 2022)</span></li>
-      </ul>
+      <article>
+        <h3>Mentorship & Recognition</h3>
+        <ul class="awards-list">
+          <li><strong>PINC Program Recognition Award</strong> <time datetime="2024-05" class="highlight">(May 2024)</time></li>
+          <li><strong>PINC Summer Peer Mentor Certificate</strong> <time datetime="2024-07" class="highlight">(July 2024)</time></li>
+          <li><strong>VIR STEM Mentorship Participant</strong> <time datetime="2022-12" class="highlight">(Dec 2022)</time></li>
+        </ul>
+      </article>
     </section>
 
     <!-- Leadership Section -->
-    <section id="leadership">
-      <h2>Leadership</h2>
+    <section id="leadership" aria-labelledby="leadership-heading">
+      <h2 id="leadership-heading">Leadership</h2>
 
-      <h3>Mentor, Monroe Elementary School</h3>
-      <p><span class="highlight">March 2024 – May 2024</span></p>
-      <ul class="leadership-list">
-        <li>Introduced 4th graders to coding through hands-on projects.</li>
-        <li>Created interactive games and led engaging classroom sessions.</li>
-      </ul>
+      <article>
+        <h3>Mentor, Monroe Elementary School</h3>
+        <time datetime="2024-03" class="highlight">March 2024 – May 2024</time>
+        <ul class="leadership-list">
+          <li>Introduced 4th graders to coding through hands-on projects.</li>
+          <li>Created interactive games and led engaging classroom sessions.</li>
+        </ul>
+      </article>
 
-      <h3>Professional & Community Memberships</h3>
-      <ul class="leadership-list">
-        <li>SACNAS</li>
-        <li>Muslim Student Association (MSA)</li>
-        <li>CSU-LSAMP</li>
-        <li>NSBE @ SFSU</li>
-      </ul>
+      <article>
+        <h3>Professional & Community Memberships</h3>
+        <ul class="leadership-list">
+          <li>SACNAS</li>
+          <li>Muslim Student Association (MSA)</li>
+          <li>CSU-LSAMP</li>
+          <li>NSBE @ SFSU</li>
+        </ul>
+      </article>
     </section>
 
     <!-- Blog Section -->
-    <section id="blog">
-      <h2>Blog</h2>
+    <section id="blog" aria-labelledby="blog-heading">
+      <h2 id="blog-heading">Blog</h2>
       <p>Coming soon!</p>
     </section>
-
   </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Abdoulfatah Abdillahi. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
