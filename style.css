@@ -655,5 +655,29 @@ footer p {
     padding: 8px 10px;
   }
 }
+
+@media (max-width: 600px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 1000;
+    padding: 0.5em 0;
+  }
+  nav ul li {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+  nav {
+    position: static;
+    width: 100vw;
+  }
+  /* Optionally, hide the menu and show a hamburger icon */
+}
      
      
