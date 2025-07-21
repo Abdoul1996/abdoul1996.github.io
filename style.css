@@ -1,4 +1,6 @@
-/* Mobile-first responsive design */
+/* =========================
+   Base & Reset
+   ========================= */
 * {
   box-sizing: border-box;
 }
@@ -13,22 +15,26 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #23272f;
+  background: #f6f8fa;
 }
 
-/* Accessibility improvements */
+/* =========================
+   Accessibility
+   ========================= */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: #000;
+  background: #007bff;
   color: white;
-  padding: 8px;
+  padding: 8px 16px;
   text-decoration: none;
   z-index: 1000;
   border-radius: 4px;
+  font-weight: 600;
+  transition: top 0.2s;
 }
-
 .skip-link:focus {
   top: 6px;
 }
@@ -45,18 +51,21 @@ body {
   border: 0 !important;
 }
 
-/* ======= Navigation ======= */
+/* =========================
+   Navigation
+   ========================= */
 nav {
-  background-color: #2b2b2b;
-  padding: 15px 0;
+  background: #23272f;
+  padding: 12px 0;
   text-align: center;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-nav ul {
+.nav-menu {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -64,62 +73,91 @@ nav ul {
   margin: 0;
   padding: 0;
   gap: 10px;
+  transition: all 0.3s;
 }
 
-nav ul li {
+.nav-menu li {
   margin: 0 10px;
 }
 
-nav ul li a {
+.nav-menu li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  transition: color 0.3s ease;
-  padding: 8px 12px;
-  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s, background 0.2s;
+  padding: 10px 16px;
+  border-radius: 6px;
   display: block;
+  letter-spacing: 0.02em;
 }
 
-nav ul li a:hover {
+.nav-menu li a:hover,
+.nav-menu li a:focus {
   color: #00bfff;
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.08);
 }
 
-/* ======= Header ======= */
+.nav-toggle {
+  display: none;
+  background: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px 18px;
+  margin: 10px 0 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+  transition: background 0.2s;
+}
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background: #0056b3;
+}
+
+/* =========================
+   Header
+   ========================= */
 header {
-  background: #f8f9fa;
-  color: #333;
-  padding: 60px 20px;
+  background: linear-gradient(90deg, #e3f0ff 0%, #f6f8fa 100%);
+  color: #23272f;
+  padding: 60px 20px 40px 20px;
   text-align: center;
   border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
-
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   margin: 0 0 10px 0;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
-
 header p {
   font-size: 1.2rem;
   margin: 0;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
-/* ======= Container & Layout ======= */
+/* =========================
+   Layout & Container
+   ========================= */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
 }
-
 .centered {
   text-align: center;
   margin: 0 auto;
 }
 
-/* ======= Flex Sections ======= */
+/* =========================
+   Flex Sections
+   ========================= */
 .flex-section {
   display: flex;
   flex-wrap: wrap;
@@ -128,55 +166,54 @@ header p {
   align-items: flex-start;
   margin-bottom: 40px;
 }
-
 .text-content {
   flex: 1 1 500px;
 }
-
 .image-content {
   flex: 1 1 300px;
   text-align: center;
 }
-
 .image-content img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
-
 .caption {
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: #555;
   margin-top: 8px;
 }
 
-/* ======= Typography & Highlighting ======= */
+/* =========================
+   Typography & Highlighting
+   ========================= */
 .highlight {
-  color: #007BFF;
+  color: #007bff;
   font-weight: bold;
 }
-
 h2 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   margin: 40px 0 20px 0;
-  color: #333;
-  border-bottom: 2px solid #007BFF;
+  color: #23272f;
+  border-bottom: 2px solid #007bff;
   padding-bottom: 10px;
+  font-weight: 700;
 }
-
 h3 {
   margin-top: 30px;
   color: #111;
   font-size: 1.4rem;
+  font-weight: 600;
 }
-
 p {
   margin-bottom: 16px;
   line-height: 1.7;
 }
 
-/* ======= Lists ======= */
+/* =========================
+   Lists & Social Links
+   ========================= */
 .awards-list,
 .leadership-list,
 .work-list,
@@ -185,7 +222,6 @@ p {
   padding-left: 20px;
   margin-bottom: 30px;
 }
-
 .awards-list li,
 .leadership-list li,
 .work-list li,
@@ -193,168 +229,106 @@ p {
   margin-bottom: 12px;
   line-height: 1.6;
 }
-
 .social-links {
   margin-top: 15px;
   font-size: 15px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 .social-links a {
   text-decoration: none;
-  margin: 0 4px;
   font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  background: #f1f3f6;
+  color: #007bff;
+  border: 1px solid #e3e8ee;
 }
-
 .social-links .cv {
   color: #ff8c00;
+  border-color: #ff8c00;
 }
-
-.social-links a:not(.cv) {
-  color: #007BFF;
-}
-
 .social-links a:hover {
-  background-color: rgba(0, 123, 255, 0.1);
+  background: #e3f0ff;
+  color: #0056b3;
 }
-
 .update-date {
   margin-top: 12px;
   font-size: 14px;
   color: #666;
 }
 
-/* ======= Sections ======= */
+/* =========================
+   Sections & Articles
+   ========================= */
 section {
   margin-bottom: 40px;
   padding: 20px 0;
 }
-
 article {
   margin-bottom: 30px;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  border-left: 4px solid #007BFF;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #007bff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
-/* ======= Research Section Layout ======= */
+/* =========================
+   Research Section Layout
+   ========================= */
 .research-flex {
   display: flex;
   gap: 40px;
   align-items: flex-start;
   margin-top: 20px;
 }
-
 .research-content {
   flex: 1;
 }
-
 .research-poster {
   flex: 0 0 300px;
   text-align: center;
 }
-
 .research-poster img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   border: 1px solid #e9ecef;
 }
-
 .poster-caption {
   margin-top: 10px;
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: #666;
   font-style: italic;
 }
-
 .conference-details {
   margin-top: 8px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #666;
   font-style: italic;
   line-height: 1.4;
   text-align: center;
 }
 
-.poster-placeholder {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 40px 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border: 1px solid #e9ecef;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.poster-placeholder:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.poster-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.poster-text {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-  display: block;
-}
-
-.poster-subtext {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  display: block;
-}
-
-.research-details {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-left: 3px solid #007BFF;
-  border-radius: 4px;
-}
-
-.research-details p {
-  margin: 8px 0;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.research-details strong {
-  color: #333;
-  font-weight: 600;
-}
-
-/* ======= Research Project Styling ======= */
+/* =========================
+   Research Project Styling
+   ========================= */
 .research-project {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 28px;
   margin-bottom: 30px;
-  border-left: 4px solid #007BFF;
+  border-left: 4px solid #007bff;
 }
-
 .project-header {
   margin-bottom: 20px;
 }
-
 .project-title {
   color: #1e3a8a;
   font-size: 1.3rem;
@@ -362,322 +336,212 @@ article {
   margin: 0 0 12px 0;
   line-height: 1.4;
 }
-
 .project-meta {
   display: flex;
   gap: 20px;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .project-author {
   color: #333;
   font-weight: 500;
   font-size: 0.95rem;
 }
-
-.project-status {
+.project-status,
+.badge {
   background: #10b981;
   color: white;
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  box-shadow: 0 1px 4px rgba(16,185,129,0.08);
 }
-
 .project-description {
   margin-bottom: 20px;
 }
-
 .project-description p {
   color: #4b5563;
   line-height: 1.7;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
-
 .project-details {
   background: #f8fafc;
   padding: 15px;
-  border-radius: 6px;
-  border-left: 3px solid #007BFF;
+  border-radius: 8px;
+  border-left: 3px solid #007bff;
 }
-
 .project-details p {
   margin: 8px 0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #64748b;
 }
-
 .project-details strong {
   color: #1e293b;
   font-weight: 600;
 }
-
 .project-details a {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: 500;
 }
-
 .project-details a:hover {
   text-decoration: underline;
+  color: #0056b3;
 }
 
-/* ======= Footer ======= */
+/* =========================
+   Footer
+   ========================= */
 footer {
-  background-color: #f8f9fa;
+  background: #f8f9fa;
   border-top: 1px solid #e9ecef;
-  padding: 20px 0;
+  padding: 24px 0;
   margin-top: 40px;
   text-align: center;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
 }
-
 footer p {
   margin: 0;
   color: #6c757d;
-  font-size: 14px;
+  font-size: 15px;
 }
 
-/* ======= Mobile Responsive Design ======= */
-
-/* Large tablets and small desktops */
+/* =========================
+   Responsive Design
+   ========================= */
 @media (max-width: 1024px) {
   .container {
     padding: 15px;
   }
-  
   header h1 {
     font-size: 2.2rem;
   }
-  
   header p {
     font-size: 1.1rem;
   }
 }
-
-/* Tablets */
+@media (max-width: 900px) {
+  .container {
+    padding: 10px;
+  }
+  .flex-section {
+    gap: 24px;
+  }
+}
 @media (max-width: 768px) {
   html {
     font-size: 14px;
   }
-  
   .container {
-    padding: 10px;
+    padding: 8px;
   }
-  
   .flex-section {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
   }
-  
   .text-content,
   .image-content {
     flex: 1 1 100%;
   }
-  
-  nav ul {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
     flex-direction: column;
     gap: 5px;
-  }
-  
-  nav ul li {
-    margin: 5px 0;
-  }
-  
-  nav ul li a {
-    font-size: 16px;
-    padding: 12px 16px;
-  }
-  
-  header {
-    padding: 40px 15px;
-  }
-  
-  header h1 {
-    font-size: 2rem;
-  }
-  
-  header p {
-    font-size: 1rem;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-    margin: 30px 0 15px 0;
-  }
-  
-  h3 {
-    font-size: 1.3rem;
-    margin-top: 25px;
-  }
-  
-  article {
-    padding: 15px;
-    margin-bottom: 20px;
-  }
-  
-  .awards-list,
-  .leadership-list,
-  .work-list,
-  .research-list {
-    padding-left: 15px;
-  }
-  
-  .research-flex {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .research-poster {
-    flex: none;
-    order: -1;
-  }
-}
-
-/* Mobile phones */
-@media (max-width: 480px) {
-  html {
-    font-size: 13px;
-  }
-  
-  .container {
-    padding: 8px;
-  }
-  
-  nav {
-    padding: 10px 0;
-  }
-  
-  nav ul li a {
-    font-size: 14px;
-    padding: 10px 12px;
-  }
-  
-  header {
-    padding: 30px 10px;
-  }
-  
-  header h1 {
-    font-size: 1.8rem;
-  }
-  
-  header p {
-    font-size: 0.9rem;
-  }
-  
-  h2 {
-    font-size: 1.6rem;
-    margin: 25px 0 12px 0;
-  }
-  
-  h3 {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-  
-  .flex-section {
-    gap: 20px;
-  }
-  
-  .image-content img {
-    max-width: 90%;
-  }
-  
-  article {
-    padding: 12px;
-    margin-bottom: 15px;
-  }
-  
-  .social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-  }
-  
-  .social-links a {
-    margin: 0;
-    padding: 10px 16px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-    min-width: 120px;
-    text-align: center;
-  }
-  
-  .awards-list,
-  .leadership-list,
-  .work-list,
-  .research-list {
-    padding-left: 12px;
-  }
-  
-  .awards-list li,
-  .leadership-list li,
-  .work-list li,
-  .research-list li {
-    margin-bottom: 10px;
-  }
-}
-
-/* Very small screens */
-@media (max-width: 320px) {
-  html {
-    font-size: 12px;
-  }
-  
-  header h1 {
-    font-size: 1.6rem;
-  }
-  
-  header p {
-    font-size: 0.8rem;
-  }
-  
-  h2 {
-    font-size: 1.4rem;
-  }
-  
-  h3 {
-    font-size: 1.1rem;
-  }
-  
-  .container {
-    padding: 5px;
-  }
-  
-  nav ul li a {
-    font-size: 13px;
-    padding: 8px 10px;
-  }
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    background: #222;
-    position: fixed;
-    top: 0;
+    background: #23272f;
+    position: absolute;
+    top: 60px;
     left: 0;
     width: 100vw;
-    height: auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border-radius: 0 0 12px 12px;
     z-index: 1000;
-    padding: 0.5em 0;
+    padding: 12px 0;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  nav {
+    position: relative;
+    width: 100vw;
+    padding: 8px 0 0 0;
   }
   nav ul li {
     margin: 0.5em 0;
     text-align: center;
   }
-  nav {
-    position: static;
-    width: 100vw;
-  }
-  /* Optionally, hide the menu and show a hamburger icon */
 }
-     
-     
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    padding: 4px;
+  }
+  header {
+    padding: 24px 6px;
+  }
+  header h1 {
+    font-size: 1.7rem;
+  }
+  header p {
+    font-size: 0.95rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 18px 0 10px 0;
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin-top: 14px;
+  }
+  .image-content img {
+    max-width: 90%;
+  }
+  article {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .social-links {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+  .social-links a {
+    min-width: 110px;
+    text-align: center;
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  header p {
+    font-size: 0.8rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 2px;
+  }
+  .nav-menu li a {
+    font-size: 12px;
+    padding: 8px 8px;
+  }
+}

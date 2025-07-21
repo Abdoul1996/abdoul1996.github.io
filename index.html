@@ -6,26 +6,27 @@
   <meta name="description" content="Abdoulfatah Abdillahi - Computer Science graduate student, researcher, and bioinformatics specialist. Portfolio showcasing research in machine learning and drug resistance prediction." />
   <meta name="keywords" content="Abdoulfatah Abdillahi, Computer Science, Data Science, Machine Learning, Bioinformatics, Research, SFSU, Genentech" />
   <meta name="author" content="Abdoulfatah Abdillahi" />
-  
-  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Abdoulfatah Abdillahi - Portfolio" />
   <meta property="og:description" content="Computer Science graduate student and researcher specializing in machine learning and bioinformatics." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://abdoul1996.github.io" />
-  
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-  
   <title>Abdoulfatah Abdillahi - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- Responsive Nav Toggle Button -->
+  <button class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="main-nav" aria-expanded="false">
+    ☰ Menu
+  </button>
+
   <!-- Navigation -->
   <nav role="navigation" aria-label="Main navigation">
-    <ul>
+    <ul id="main-nav" class="nav-menu">
       <li><a href="#about" aria-label="Go to About section">About</a></li>
       <li><a href="#research" aria-label="Go to Research Experience section">Research Experience</a></li>
       <li><a href="#projects" aria-label="Go to Projects section">Projects</a></li>
@@ -117,43 +118,7 @@
 
 
 
-
-
-
-
       <h3>Completed</h3>
-      
-      <!-- First Completed Research Project -->
-      <div class="research-flex">
-        <div class="research-content">
-          <article class="research-project">
-            <div class="project-header">
-              <h4 class="project-title">Predicting Escherichia coli Drug Resistance through Different Deep Learning-Based Approaches using a Comprehensive Pan-genome Dataset</h4>
-              <div class="project-meta">
-                <span class="project-author">Abdoulfatah Abdillahi</span>
-                <span class="project-status">#TAGC24</span>
-              </div>
-            </div>
-            <div class="project-description">
-              <p>In this study, we processed three genomic datasets and implemented a complete bioinformatics workflow, including data download, FastQ trimming, de novo assembly, and genome annotation using Prokka. We analyzed existing machine learning models for predicting antibiotic resistance and proposed a future direction that integrates natural language processing (NLP) to enhance biological insight extraction.</p>
-            </div>
-            <div class="project-details">
-              <p><strong>Supervisor:</strong> Pleuni Pennings, PhD, Ilmi Yoon, PhD</p>
-              <p><strong>Affiliation:</strong> <a href="https://pleunipennings.wordpress.com/?s=Abdoulfatah+Abdillahi+&submit=Search" target="_blank" rel="noopener noreferrer">CoDE Lab</a>, <a href="https://seo.sfsu.edu/" target="_blank" rel="noopener noreferrer">SEO</a>, San Francisco State University</p>
-              <p><strong>Contributors:</strong> Estefanos Kebebew, Myco Torres, Juvenal F. Barajas, Gian L. Baldonado</p>
-            </div>
-          </article>
-        </div>
-        
-                  <div class="research-poster">
-            <a href="/assets/pdfs/TAGC24_poster.pdf" target="_blank" rel="noopener">
-              <img src="/assets/pdfs/TAGCC24.png" alt="Preview of TAGC24 research poster" loading="lazy" />
-            </a>
-            <p class="poster-caption">TAGC24 research poster (click to view PDF)</p>
-            <p class="conference-details">The Allied Genetics Conference<br>National Harbor, Washington DC<br>March 6-10, 2024</p>
-          </div>
-      </div>
-
       <!-- Second Completed Research Project -->
       <div class="research-flex">
         <div class="research-content">
@@ -180,13 +145,99 @@
         
         <div class="research-poster">
           <a href="/assets/pdfs/Sacnas24_poster.pdf" target="_blank" rel="noopener">
-            <img src="/assets/pdfs/sacnas24.png" alt="Preview of SACNAS24 research poster" loading="lazy" />
+            <img src="/assets/images/sacnas24.png" alt="Preview of SACNAS24 research poster" loading="lazy" />
           </a>
-          <p class="poster-caption">SACNAS24 research poster (click to view PDF)</p>
-          <p class="conference-details">2024 NDISTEM Conference<br>Phoenix, Arizona<br>October 30 - November 2, 2024</p>
+          <p class="poster-caption">
+            SACNAS24 Poster – Presented at the 2024 NDiSTEM Conference, Phoenix, AZ
+            <br><em>(Click to view PDF)</em>
+          </p>
         </div>
       </div>
+
+      <!-- First Completed Research Project -->
+      <div class="research-flex">
+        <div class="research-content">
+          <article class="research-project">
+            <div class="project-header">
+              <h4 class="project-title">Predicting Escherichia coli Drug Resistance through Different Deep Learning-Based Approaches using a Comprehensive Pan-genome Dataset</h4>
+              <div class="project-meta">
+                <span class="project-author">Abdoulfatah Abdillahi</span>
+                <span class="project-status">#TAGC24</span>
+              </div>
+            </div>
+            <div class="project-description">
+              <p>In this study, we processed three genomic datasets and implemented a complete bioinformatics workflow, including data download, FastQ trimming, de novo assembly, and genome annotation using Prokka. We analyzed existing machine learning models for predicting antibiotic resistance and proposed a future direction that integrates natural language processing (NLP) to enhance biological insight extraction.</p>
+            </div>
+            <div class="project-details">
+              <p><strong>Supervisor:</strong> Pleuni Pennings, PhD, Ilmi Yoon, PhD</p>
+              <p><strong>Affiliation:</strong> <a href="https://pleunipennings.wordpress.com/?s=Abdoulfatah+Abdillahi+&submit=Search" target="_blank" rel="noopener noreferrer">CoDE Lab</a>, <a href="https://seo.sfsu.edu/" target="_blank" rel="noopener noreferrer">SEO</a>, San Francisco State University</p>
+              <p><strong>Contributors:</strong> Estefanos Kebebew, Myco Torres, Juvenal F. Barajas, Gian L. Baldonado</p>
+            </div>
+          </article>
+        </div>
+        
+                  <div class="research-poster">
+            <a href="/assets/pdfs/TAGC24_poster.pdf" target="_blank" rel="noopener">
+              <img src="/assets/images/TAGCC24.png" alt="Preview of TAGC24 research poster" loading="lazy" />
+            </a>
+              <p class="poster-caption">
+                TAGC24 Poster – Presented at the 2024 TAGC Conference, National Harbor, MD
+                <br><em>(Click to view PDF)</em>
+              </p>
+            </div>
+      </div>
     </section>
+
+    <!-- Third Completed Research Project -->
+    <div class="research-flex">
+      <div class="research-content">
+        <article class="research-project">
+          <div class="project-header">
+            <h4 class="project-title">
+              Optimizing Brain Tumor Segmentation by Multi-Slicing Images with T1, T1CE, FLAIR Modalities using U-Net
+            </h4>
+            <div class="project-meta">
+              <span class="project-author">Abdoulfatah Abdillahi</span>
+              <span class="project-status badge">Student Project Showcased at COSE</span>
+            </div>
+          </div>
+    
+          <div class="project-description">
+            <p>
+              In this study, we determined the most effective MRI modality—T1, T1CE, or FLAIR—for whole brain tumor segmentation using a U-Net model. The model was trained and evaluated on the BraTS dataset, with segmentation accuracy measured using Dice and Jaccard coefficients.
+            </p>
+          </div>
+    
+          <div class="project-details">
+            <p><strong>Supervisor:</strong> Dr. Ilmi Yoon</p>
+            <p><strong>Contributors:</strong> Brandon Bahr Maravilla, Yoonji Lee</p>
+            <p>
+              <strong>Official Listing:</strong>
+              <a href="https://cose.sfsu.edu/2023-167-csm" target="_blank" rel="noopener noreferrer">
+                cose.sfsu.edu/2023-167-csm
+              </a>
+            </p>
+          </div>
+        </article>
+      </div>
+    
+      <div class="research-poster">
+        <a href="/assets/pdfs/COSE Poster.pdf" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/assets/images/COSE_Poster.png"
+            alt="Poster preview: Brain tumor segmentation research project"
+            loading="lazy"
+          />
+        </a>
+          <p class="poster-caption">
+          COSE Poster – Presented at the 2023 CoSE Conference, San Francisco State University, CA
+          <br><em>(Click to view PDF)</em>
+        </p>
+      </div>
+    </div>
+    
+    </section>
+    
 
     <!-- Work Experience Section -->
     <section id="work" aria-labelledby="work-heading">
@@ -312,11 +363,23 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer role="contentinfo">
     <div class="container">
       <p>&copy; 2025 Abdoulfatah Abdillahi. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Responsive Nav Toggle Script -->
+  <script>
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('main-nav');
+
+    toggleBtn.addEventListener('click', () => {
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+      navMenu.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
