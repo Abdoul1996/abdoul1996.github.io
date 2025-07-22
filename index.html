@@ -87,32 +87,35 @@
         Looking forward, I am also open other areas that relates in AI.          
       </p>
 
-      <!-- Ongoing Research -->
-      <h3>Ongoing</h3>
-      <div class="research-flex">
-        <div class="research-content">
-          <!-- Ongoing research item 1 -->
-                      <article>
-              <h4>Machine Learning-Driven Pan-genome Pipeline for Drug Resistance Prediction in E. coli</h4>
-              <p><strong>Advisors:</strong> Dr. Pleuni Pennings & Dr. Sara El Alaouni<br>
-              <time datetime="2023-09" class="highlight">Sep 2023 – Present</time></p>
-              <ul class="research-list">
-                <li>Preprocessed genomic data using Fasterq-Dump, Prokka, Roary, etc.</li>
-                <li>Built ML pipeline using gene presence/absence and SNP data.</li>
-                <li>Developed and optimized a Variational Autoencoder (VAE) model.</li>
-                <li>Focused on Amoxicillin resistance with improved latent feature learning.</li>
-                <li>Collaborated with microbiology lab members for interdisciplinary insight.</li>
-              </ul>
-            </article>
-          <!-- Add more ongoing research articles as needed -->
-        </div>
-        <div class="research-poster">
-          <a href="/assets/pdfs/ongoing_poster.pdf" target="_blank" rel="noopener">
-            <img src="/assets/pdfs/ongoing_poster_thumbnail.png" alt="Preview of ongoing research poster" loading="lazy" />
-          </a>
-          <p class="poster-caption">Ongoing research poster (click to view PDF)</p>
-        </div>
-      </div>
+     <!-- Ongoing Research -->
+<h3>Ongoing</h3>
+<div class="research-flex">
+  <div class="research-content">
+    <!-- Ongoing research item 1 -->
+    <article>
+      <h4>Predicting <em>E. coli</em> Drug Resistance Using Machine Learning and Deep Learning</h4>
+      <p>
+        <strong>Advisors:</strong> Dr. Pleuni Pennings & Dr. Sara El Alaouni<br>
+        <time datetime="2024-09" class="highlight">Jan 2024 – Present</time>
+      </p>
+      <ul class="research-list">
+        <li>Developing a pipeline to extract gene names from NCBI BLAST results and applying a 5% minor allele frequency (MAF) threshold to filter SNP features across 15,695 genes, improving feature quality and reducing dimensionality.</li>
+        <li>Constructing a pangenome dataset combining gene presence/absence and SNP data for comprehensive feature representation.</li>
+        <li>Training predictive models using both traditional machine learning (e.g., Random Forests) and deep learning architectures.</li>
+        <li>Focusing on accurate prediction of amoxicillin resistance in <em>E. coli</em> through advanced feature engineering and modeling.</li>
+      </ul>
+    </article>
+    <!-- Add more ongoing research articles as needed -->
+  </div>
+
+  <div class="research-poster">
+    <a href="/assets/pdfs/ongoing_poster.pdf" target="_blank" rel="noopener">
+      <img src="/assets/pdfs/ongoing_poster_thumbnail.png" alt="Preview of ongoing research poster" loading="lazy" />
+    </a>
+    <p class="poster-caption"><em>Master's thesis research poster (click to view PDF)</em></p>
+  </div>
+</div>
+
 
       <!-- Completed Research -->
 
@@ -264,10 +267,40 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-      <p>Links and descriptions of your projects.</p>
-    </section>
+<section id="projects" aria-labelledby="projects-heading">
+  <h2 id="projects-heading">Projects</h2>
+  <p>Links and descriptions of your projects.</p>
+  
+  <article class="project-flex">
+    <div class="project-image">
+      <img src="assets/images/PET.png" alt="Representative PET Scan of Alzheimer's Disease" loading="lazy" style="max-width:120px; border-radius:8px;">
+      <p class="caption">Representative PET Scan of Alzheimer's Disease</p>
+    </div>
+  
+    <div class="project-content">
+      <h3 style="margin-bottom: 0.25em;">
+        <a href="https://github.com/Abdoul1996/Alzheimer_Classification" target="_blank" rel="noopener" style="color: #1a0dab;">
+          Alzheimer’s Disease Classification Using PET Images
+        </a>
+      </h3>
+      <p style="margin: 0.1em 0;">
+        <strong>Abdoulfatah Abdillahi</strong><br>
+        <span style="color: green;">Deep Learning Final Project, San Francisco State University, 2023</span>
+      </p>
+      <p style="margin: 0.3em 0;">
+        Implemented and compared three deep learning models (VGG16, InceptionV3, ResNet50) to classify brain PET scans into cognitive stages (CN, EMCI, AD). Leveraged transfer learning and advanced data augmentation on the ADNI dataset, achieving over 95% test accuracy with VGG16.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/Abdoul1996/Alzheimer_Classification/tree/main/notebooks" target="_blank" rel="noopener">Code</a>
+        <a href="https://github.com/Abdoul1996/Alzheimer_Classification/blob/main/Report/Presentation.pdf" target="_blank" rel="noopener">Slides</a>
+        <a href="https://github.com/Abdoul1996/Alzheimer_Classification/blob/main/Report/Report_Proposal.pdf" target="_blank" rel="noopener">Report Proposal</a>
+      </div>
+      <div class="project-tech" style="margin-top: 0.3em;">
+        <strong>Technologies:</strong> Python, TensorFlow/Keras, Jupyter Notebook, ADNI dataset
+      </div>
+    </div>
+  </article>
+</section>
 
     <!-- Education Section -->
     <section id="education" aria-labelledby="education-heading">
@@ -310,7 +343,18 @@
         <ul class="awards-list">
           <li><strong>NIH – UCSF/SFSU Bridges Fellowship</strong> <time datetime="2023" class="highlight">(2023–2025)</time></li>
           <li><strong>NDiSTEM Travel Scholarship (SACNAS)</strong> <time datetime="2024-10" class="highlight">(Oct 2024)</time></li>
-          <li><strong>Genentech – PINC Fellowship</strong> <time datetime="2022" class="highlight">(2022–2023)</time></li>
+          <li>
+            <strong>PINC Scholar Spotlight – University Feature (Genentech PINC Fellowship)</strong>
+            <time datetime="2024-05" class="highlight">(2022 - 2023)</time>
+            <br>
+            <span>
+              Featured by SFSU for my work and journey as a Genentech PINC Fellow.
+            </span>
+            <br>
+            <a href="https://pinc.sfsu.edu/speaking-gen-pinc-scholar-abdoulfatah-abdillahi" target="_blank" rel="noopener">
+              Read the full spotlight interview ↗
+            </a>
+          </li>
         </ul>
       </article>
 
@@ -326,8 +370,18 @@
         <h3>Mentorship & Recognition</h3>
         <ul class="awards-list">
           <li><strong>PINC Program Recognition Award</strong> <time datetime="2024-05" class="highlight">(May 2024)</time></li>
-          <li><strong>PINC Summer Peer Mentor Certificate</strong> <time datetime="2024-07" class="highlight">(July 2024)</time></li>
-          <li><strong>VIR STEM Mentorship Participant</strong> <time datetime="2022-12" class="highlight">(Dec 2022)</time></li>
+          <li><strong>PINC Summer Peer Mentor Certificate</strong> <time datetime="2024-07" class="highlight">(July 2024)</time></li> 
+          <li><strong>Gators Giving Back – PINC & gSTAR Mentor Program</strong>
+            <time datetime="2024-12-12" class="highlight">(Dec 2024)</time>
+            <br>
+            <span>
+              Recognized by SFSU PINC for outstanding mentorship and support of PINC students.
+            </span>
+            <br>
+            <a href="https://www.instagram.com/p/DDfQqKnpgK2/" target="_blank" rel="noopener">
+              View the official recognition post ↗
+            </a>
+          </li>
         </ul>
       </article>
     </section>

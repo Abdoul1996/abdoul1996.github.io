@@ -545,3 +545,63 @@ footer p {
     padding: 8px 8px;
   }
 }
+
+
+/* =========================
+   Project Section Enhancements (New)
+   ========================= */
+   .project-flex {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    align-items: flex-start;
+  }
+  
+  .project-image img {
+    max-width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  
+  .project-content h3 a {
+    color: #1a0dab;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  .project-content h3 a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  .project-content .project-meta {
+    font-size: 0.95rem;
+    margin: 0.25em 0 0.75em;
+    color: #198754;
+    font-weight: 500;
+  }
+  
+  .project-content p {
+    font-size: 0.96rem;
+    margin-bottom: 0.6rem;
+    color: #444;
+  }
+  
+  .project-links a {
+    margin-right: 10px;
+    font-weight: 500;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .project-links a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  .project-tech {
+    font-size: 0.92rem;
+    color: #555;
+    margin-top: 0.4em;
+  }
