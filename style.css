@@ -244,7 +244,8 @@ p {
   color: #007bff;
   border: 1px solid #e3e8ee;
 }
-.social-links .cv {
+.social-links .cv,
+.social-links .resume {
   color: #ff8c00;
   border-color: #ff8c00;
 }
