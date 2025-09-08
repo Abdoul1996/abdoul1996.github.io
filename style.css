@@ -655,6 +655,7 @@ footer p {
   margin-bottom: 32px;
   border-left: 4px solid #007bff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
 
 .blog-post:hover {
@@ -702,6 +703,7 @@ footer p {
 
 .blog-content {
   margin-top: 20px;
+  overflow: hidden;
 }
 
 .blog-excerpt {
@@ -794,6 +796,8 @@ footer p {
   margin: 32px 0 16px 0;
   padding-top: 8px;
   border-top: 1px solid #e9ecef;
+  text-align: left;
+  clear: both;
 }
 
 .blog-content h4:first-of-type {
@@ -806,17 +810,32 @@ footer p {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 24px 0 12px 0;
+  text-align: left;
+  clear: both;
 }
 
 .blog-content p {
   margin-bottom: 16px;
   line-height: 1.7;
   color: #4b5563;
+  text-align: left;
 }
 
 .blog-content strong {
   color: #1e293b;
   font-weight: 600;
+}
+
+.blog-content ul {
+  margin: 16px 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.blog-content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #4b5563;
 }
 
 .blog-image-placeholder {
@@ -838,6 +857,7 @@ footer p {
 .blog-image {
   text-align: center;
   margin: 24px 0;
+  clear: both;
 }
 
 .blog-image img {
@@ -859,6 +879,8 @@ footer p {
   color: #6b7280;
   font-style: italic;
   line-height: 1.5;
+  text-align: center;
+  max-width: 100%;
 }
 
 /* Responsive adjustments for blog content */
