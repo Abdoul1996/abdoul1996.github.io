@@ -842,10 +842,15 @@ footer p {
 
 .blog-image img {
   max-width: 100%;
+  max-height: 350px;
+  width: auto;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   border: 1px solid #e9ecef;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .blog-image-caption {
@@ -877,6 +882,10 @@ footer p {
     margin: 20px 0;
   }
   
+  .blog-image img {
+    max-height: 280px;
+  }
+  
   .blog-image-caption {
     font-size: 0.85rem;
   }
@@ -898,6 +907,10 @@ footer p {
   
   .blog-image {
     margin: 16px 0;
+  }
+  
+  .blog-image img {
+    max-height: 220px;
   }
   
   .blog-image-caption {
