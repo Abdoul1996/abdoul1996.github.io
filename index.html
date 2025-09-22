@@ -505,8 +505,36 @@
       <h2 id="blog-heading">Blog</h2>
       <p>Thoughts, insights, and reflections on my journey in computer science, research, and beyond.</p>
       
+      <!-- Blog Series Overview -->
+      <div class="blog-series-overview">
+        <h3>🎓 HCI Learning Journey Series</h3>
+        <p>Follow my journey as I explore Human-Computer Interaction principles and apply them to real-world projects.</p>
+        <div class="series-progress">
+          <div class="series-item completed">
+            <span class="series-number">1</span>
+            <a href="#blog-post-1" class="series-title">My Journey Begins</a>
+            <span class="series-date">Sept 2025</span>
+          </div>
+          <div class="series-item upcoming">
+            <span class="series-number">2</span>
+            <span class="series-title">HCI Principles in Practice</span>
+            <span class="series-date">Coming Soon</span>
+          </div>
+          <div class="series-item upcoming">
+            <span class="series-number">3</span>
+            <span class="series-title">PathFinder Development</span>
+            <span class="series-date">Planned</span>
+          </div>
+          <div class="series-item upcoming">
+            <span class="series-number">4</span>
+            <span class="series-title">User Testing & Feedback</span>
+            <span class="series-date">Planned</span>
+          </div>
+        </div>
+      </div>
+      
       <!-- Blog Post 1 -->
-      <article class="blog-post">
+      <article class="blog-post" id="blog-post-1">
         <div class="blog-header">
           <h3>HCI Blog Series (1/6) – My Journey Begins</h3>
           <div class="blog-meta">
@@ -652,6 +680,133 @@
           
         </div>
       </article>
+            <!-- Blog Post 2 -->
+      <article class="blog-post" id="blog-post-2" tabindex="-1">
+        <div class="blog-header">
+          <h3>HCI Blog Series (2/6) – Exploring User Research</h3>
+          <div class="blog-meta">
+            <time datetime="2025-09-20" class="blog-date">September 20, 2025</time>
+            <span class="blog-category">Human-Computer Interaction</span>
+          </div>
+          <p class="lede">My process for studying SFSU CS students’ planning needs, what surprised me, and how insights shaped PathFinder.</p>
+        </div>
+
+        <div class="blog-content">
+          <h4>From Startup Dreams to User Research Reality</h4>
+          <p>
+            Before I took the class, I had been thinking of starting my own startup company. I even reached out to my Principal Investigator (PI) to get an idea if we could switch our research to a startup company. Because we are solving a real problem, unfortunately, my PI moved to Europe for personal reasons, as you can see in our chat:
+          </p>
+          
+          <div class="blog-image">
+            <img src="assets/images/chat_screenshot.png" alt="Chat conversation showing PI's response about moving to Europe" loading="lazy" />
+            <p class="blog-image-caption">My conversation with my PI about potential startup collaboration</p>
+          </div>
+          
+          <p>
+            Still, I wasn't discouraged. I knew I would pursue the idea when the right opportunity came. When the semester began, I felt energized during the first week of HCI. To me, HCI felt like a mini Y Combinator: a chance to ignite my idea, collaborate with a small team, and engage with stakeholders such as Dr. Sanika Doolani. That's when I proposed my project, PathFinder, which I introduced in my first blog.
+          </p>
+          
+          <p>
+            In this second blog, I'll take a deeper dive into my User Research journey. As a completed undergraduate at SFSU, I've experienced firsthand the challenges of planning courses, dealing with prerequisites, limited class availability, and navigating advisor access. But I knew my own story couldn't be the only perspective, and I didn't want my personal frustrations to bias the app design. To test my idea, I turned to other students.
+          </p>
+
+          <h4>My Research Approach</h4>
+          <p>
+            I focused on diversity in my participants, including undergraduates, transfer students, and graduate students to better understand how they plan their courses and what obstacles they face. My goal was to identify unmet needs and opportunities for innovation that could guide the design of PathFinder, ensuring it is student-centered, reduces stress, and helps students stay on track for timely graduation.
+          </p>
+          
+          <p>
+            To achieve this, I used multiple UX research methods, starting with a survey. The survey allowed me to collect quantitative insights and validate patterns across a broader group of students. Here's what I discovered:
+          </p>
+
+          <h4>Participant Demographics</h4>
+          <p>
+            I collected responses from 18 students across different stages of study. The majority were seniors (67%), with smaller groups of juniors, graduates, sophomores, and freshmen. This gave me perspectives from students close to graduation as well as those earlier in their academic journey.
+          </p>
+          
+          <div class="blog-image">
+            <img src="assets/images/current_year_study.png" alt="Pie chart showing distribution of students by year of study - 67% Seniors, 11.1% each for Graduate and Junior, with smaller portions for Sophomore and Freshman" loading="lazy" />
+            <p class="blog-image-caption">Distribution of survey participants by academic year</p>
+          </div>
+
+          <h4>Advising Access Challenges</h4>
+          <p>
+            When asked about advising frequency, two-thirds of students (67%) reported meeting their advisor only once per semester, while another 28% met just a few times per semester. This shows that many students lack regular advising, leaving room for confusion about prerequisites and graduation planning.
+          </p>
+          
+          <div class="blog-image">
+            <img src="assets/images/advising_frequency.png" alt="Pie chart showing advising frequency - 66.7% once a semester, 27.8% a few times a semester, 5.5% weekly" loading="lazy" />
+            <p class="blog-image-caption">Frequency of meetings with academic or career advisers</p>
+          </div>
+
+          <h4>Strong Interest in Technology-Driven Solutions</h4>
+          <p>
+            Students showed strong enthusiasm for technology-driven advising support. Over 88% of respondents said they were interested or very interested in an app that would provide CS-specific advising without requiring appointments.
+          </p>
+          
+          <div class="blog-image">
+            <img src="assets/images/app_interest.png" alt="Pie chart showing app interest - 55.6% interested, 33.3% very interested, 11.1% neutral" loading="lazy" />
+            <p class="blog-image-caption">Student interest in an app for CS-focused advising without appointments</p>
+          </div>
+
+          <h4>AI-Powered Chatbot Potential</h4>
+          <p>
+            Similarly, students viewed a chatbot trained on advising information as a helpful resource. More than 70% found it helpful or very helpful, while only a small fraction were neutral or doubtful. This suggests that AI-driven advising tools could complement human advisors and improve accessibility.
+          </p>
+          
+          <div class="blog-image">
+            <img src="assets/images/chatbot_helpfulness.png" alt="Pie chart showing chatbot helpfulness - 50% somewhat helpful, 22.2% very helpful, 16.7% neutral, 11.1% not very helpful" loading="lazy" />
+            <p class="blog-image-caption">Perceived helpfulness of a chatbot trained on CS advising information</p>
+          </div>
+
+          <h4>Key Insights That Shaped PathFinder</h4>
+          <p>
+            These findings were eye-opening and directly influenced how I approached PathFinder's design:
+          </p>
+          
+          <ul>
+            <li><strong>Accessibility Gap:</strong> The limited advisor access confirmed that students need alternative ways to get guidance, especially for quick questions about prerequisites and course planning.</li>
+            <li><strong>Technology Readiness:</strong> The overwhelming interest in tech solutions showed that students are ready to embrace digital tools for academic planning.</li>
+            <li><strong>AI Acceptance:</strong> The positive reception to chatbot technology validated my decision to include AI-powered features in PathFinder.</li>
+            <li><strong>Diverse Needs:</strong> Having participants from different academic levels helped me understand that the app needs to serve both new students and those nearing graduation.</li>
+          </ul>
+
+          <h4>Beyond the Data: Personal Reflections</h4>
+          <p>
+            Conducting this research taught me that user research isn't just about collecting data—it's about understanding people's real struggles and designing solutions that truly help. The process of talking to students, analyzing their responses, and seeing the patterns emerge made me realize how much I had been making assumptions about what students needed.
+          </p>
+          
+          <p>
+            This experience reinforced my belief that good design comes from understanding users deeply, not from building what we think they want. It also showed me the power of combining quantitative data (surveys) with qualitative insights to create a complete picture of user needs.
+          </p>
+
+          <h4>Looking Forward</h4>
+          <p>
+            Armed with these insights, I'm now more confident than ever that PathFinder addresses a real need. The research validated my initial instincts while also revealing new opportunities I hadn't considered. Most importantly, it reminded me that the best solutions come from listening to the people who will actually use them.
+          </p>
+          
+          <p>
+            In my next blog, I'll share how these research findings are shaping the actual design and development of PathFinder, and how I'm applying HCI principles to create an interface that students will love to use.
+          </p>
+        </div>
+
+        <div class="blog-navigation">
+          <div class="nav-previous">
+            <span class="nav-label">Previous Post</span>
+            <a class="nav-title" href="#blog-post-1">My Journey Begins</a>
+          </div>
+          <div class="nav-next">
+            <span class="nav-label">Next Post</span>
+            <span class="nav-title">PathFinder Development</span>
+            <span class="nav-subtitle">Planned</span>
+          </div>
+        </div>
+      </article>
+
+
+
+
+
     </section>
   </main>
 

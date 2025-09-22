@@ -647,6 +647,206 @@ footer p {
 /* =========================
    Blog Section Styling
    ========================= */
+
+/* Blog Series Overview */
+.blog-series-overview {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 40px;
+  border-left: 4px solid #007bff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.blog-series-overview h3 {
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.blog-series-overview p {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+}
+
+.series-progress {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.series-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+  border-left: 3px solid #e5e7eb;
+}
+
+.series-item.completed {
+  border-left-color: #10b981;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+}
+
+.series-item.upcoming {
+  opacity: 0.7;
+  background: #f9fafb;
+}
+
+.series-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.series-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.series-item.completed .series-number {
+  background: #10b981;
+}
+
+.series-item.upcoming .series-number {
+  background: #9ca3af;
+}
+
+.series-title {
+  flex: 1;
+  font-weight: 600;
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.series-title:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.series-date {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+/* Blog Navigation */
+.blog-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e9ecef;
+  gap: 20px;
+}
+
+.nav-previous,
+.nav-next {
+  flex: 1;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.nav-next {
+  border-left-color: #007bff;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+}
+
+.nav-previous:hover,
+.nav-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.nav-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 2px;
+}
+
+.nav-subtitle {
+  display: block;
+  font-size: 0.9rem;
+  color: #007bff;
+  font-style: italic;
+}
+
+/* Responsive design for series */
+@media (max-width: 768px) {
+  .blog-series-overview {
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  
+  .series-progress {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .series-item {
+    padding: 12px;
+    gap: 10px;
+  }
+  
+  .series-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .series-title {
+    font-size: 0.9rem;
+  }
+  
+  .series-date {
+    font-size: 0.8rem;
+  }
+  
+  .blog-navigation {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .nav-previous,
+  .nav-next {
+    padding: 12px;
+  }
+}
 .blog-post {
   background: #fff;
   border-radius: 12px;
@@ -938,4 +1138,21 @@ footer p {
   .blog-image-caption {
     font-size: 0.8rem;
   }
+}
+
+/* Make in-page anchors stop below sticky nav */
+#blog .blog-post { scroll-margin-top: 96px; }
+
+/* Media grid for research images */
+.media-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.media-grid figure { margin: 0; }
+.media-grid figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
 }
