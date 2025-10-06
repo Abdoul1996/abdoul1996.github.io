@@ -1140,6 +1140,51 @@ footer p {
   }
 }
 
+/* Video styling */
+.blog-video {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-container::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive video styling */
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 100%;
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    margin: 0 8px;
+  }
+}
+
 /* Make in-page anchors stop below sticky nav */
 #blog .blog-post { scroll-margin-top: 96px; }
 
