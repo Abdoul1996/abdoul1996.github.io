@@ -1,150 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Abdoulfatah Abdillahi - Computer Science graduate student, researcher, and bioinformatics specialist. Portfolio showcasing research in machine learning and drug resistance prediction." />
-  <meta name="keywords" content="Abdoulfatah Abdillahi, Computer Science, Data Science, Machine Learning, Bioinformatics, Research, SFSU, Genentech" />
-  <meta name="author" content="Abdoulfatah Abdillahi" />
-  <meta property="og:title" content="Abdoulfatah Abdillahi - Portfolio" />
-  <meta property="og:description" content="Computer Science graduate student and researcher specializing in machine learning and bioinformatics." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abdoul1996.github.io" />
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-  <title>Abdoulfatah Abdillahi - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdoulfatah Abdillahi - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Skip to main content for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- Responsive Nav Toggle Button -->
-  <button class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="main-nav" aria-expanded="false">
-    ☰ Menu
-  </button>
-
   <!-- Navigation -->
-  <nav role="navigation" aria-label="Main navigation">
-    <ul id="main-nav" class="nav-menu">
-      <li><a href="#about" aria-label="Go to About section">About</a></li>
-      <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
-      <li><a href="#work" aria-label="Go to Work Experience section">Work Experience</a></li>
-      <li><a href="#research" aria-label="Go to Research Experience section">Research Experience</a></li>
-      <li><a href="#projects" aria-label="Go to Projects section">Projects</a></li>
-      <li><a href="#education" aria-label="Go to Education section">Education</a></li>
-      <li><a href="#awards" aria-label="Go to Honors and Awards section">Honors and Awards</a></li>
-      <li><a href="#leadership" aria-label="Go to Leadership section">Leadership</a></li>
-      <li><a href="#blog" aria-label="Go to Blog section">Blog</a></li>
-      <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link">WORK</a>
+        </li>
+        <li class="nav-item">
+          <a href="projects.html" class="nav-link">PROJECTS</a>
+        </li>
+        <li class="nav-item">
+          <a href="service.html" class="nav-link">SERVICE</a>
+        </li>
+        <li class="nav-item">
+          <a href="honors.html" class="nav-link">HONORS</a>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">BLOG</a>
+        </li>
     </ul>
+      
+      <!-- Mobile menu toggle -->
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero-section">
+  <section id="home" class="hero">
     <div class="hero-content">
-      <div class="hero-text">
-        <span class="hero-label">ML Engineer & Researcher</span>
-        <h1 class="hero-title">Building AI Systems for Real-World Impact</h1>
-        <p class="hero-description">
-          MS in Data Science & AI | Graduate Researcher | Ex-Genentech
-        </p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">2+</span>
-            <span class="stat-label">Years Research</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">15K+</span>
-            <span class="stat-label">Genes Analyzed</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">3</span>
-            <span class="stat-label">Conference Posters</span>
-          </div>
-        </div>
-        <div class="hero-cta">
-          <a href="#contact" class="btn-primary">Get In Touch</a>
-          <a href="#projects" class="btn-secondary">View Projects</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="/assets/images/Abdoul.png" alt="Abdoulfatah Abdillahi" />
-      </div>
-    </div>
-  </section>
-
-  <main id="main-content" class="container" role="main">
-    <!-- About Section -->
-    <section id="about" class="flex-section" aria-labelledby="about-heading">
-      <div class="text-content">
-        <h2 id="about-heading" class="visually-hidden">About Me</h2>
-        <div class="about-metrics">
-          <span class="metric-badge">15K+ genes processed</span>
-          <span class="metric-badge">3 conference posters</span>
-          <span class="metric-badge">2 yrs research</span>
-          <span class="metric-badge">MS Data Science & AI</span>
-        </div>
-        <p>
-          Hi, I am <span class="highlight">Abdoulfatah Abdillahi</span> (just call me <span class="highlight">Abdoul</span>). I'm currently pursuing my Master's in Data Science and AI at San Francisco State University, where my thesis focuses on predicting <em>E. coli</em> drug resistance using machine learning and deep learning models under the guidance of Dr. Pleuni Pennings and Dr. Sara El Alaouni.
-        </p>
-        <p>
-          I bring hands-on ML engineering experience from my industry internship at <span class="highlight">Genentech</span> and 2+ years of graduate research at the intersection of computer science and biology. My expertise spans bioinformatics, deep learning (CNNs, VAEs), and high-performance computing.
-        </p>
-        <p>
-          Outside of academics, I enjoy running, playing soccer, and visiting historical places like Egypt and Ethiopia.
-        </p>
-      </div>
-      <div class="image-content">
-        <img src="/assets/images/Abdoul.png" alt="Portrait of Abdoulfatah Abdillahi" loading="lazy" />
-        <p class="caption">Photo of Abdoul</p>
-        <div class="social-links">
-          <a href="/assets/pdfs/Abdoul_Curriculum_vitae.pdf" class="cv" target="_blank" rel="noopener noreferrer" aria-label="Download CV (opens in new tab)">CV</a> /
-          <a href="https://github.com/Abdoul1996" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile (opens in new tab)">GitHub</a> /
-          <a href="https://www.linkedin.com/in/abdoulfatah-abdillahi/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile (opens in new tab)">LinkedIn</a>
-        </div>
-        <p class="update-date">Last updated: July 2025</p>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <h2>Technical Expertise</h2>
-      <div class="grid grid--3">
-        <article class="card">
-          <h3>Modeling</h3>
-          <ul class="skills">
-            <li><span>Boosting (XGBoost/LightGBM)</span><em>Advanced</em></li>
-            <li><span>DL (CV/NLP/Tabular)</span><em>Proficient</em></li>
-            <li><span>Time-series (SARIMAX, features)</span><em>Proficient</em></li>
-          </ul>
-          <div class="tags"><span class="tag">PyTorch</span> <span class="tag">TensorFlow</span></div>
-        </article>
-        <article class="card">
-          <h3>Data & MLOps</h3>
-          <ul class="skills">
-            <li><span>Dask / parallel</span><em>Proficient</em></li>
-            <li><span>Experiment tracking</span><em>Working</em></li>
-            <li><span>Dash/Plotly</span><em>Advanced</em></li>
-          </ul>
-          <div class="tags"><span class="tag">MLflow</span> <span class="tag">W&B</span></div>
-        </article>
-        <article class="card">
-          <h3>Bioinformatics</h3>
-          <ul class="skills">
-            <li><span>Pangenome (SNP/PAV)</span><em>Advanced</em></li>
-            <li><span>BLAST/Prokka</span><em>Proficient</em></li>
-            <li><span>QC & feature eng.</span><em>Advanced</em></li>
-          </ul>
-          <div class="tags"><span class="tag">NCBI</span> <span class="tag">HPC/SLURM</span></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Work Experience Section -->
-    <section id="work" aria-labelledby="work-heading">
-      <h2 id="work-heading">Work Experience</h2>
+      <h1 class="hero-name">ABDOULFATAH ABDILLAHI</h1>
       
+
       <article class="work-card">
         <div class="work-header">
           <div class="work-title-group">
@@ -1184,130 +1085,263 @@
         <div class="contact-actions">
           <a href="mailto:abdoulfatah.abdillahi@sfsu.edu?subject=ML Engineering Opportunity" class="btn-primary">Start Conversation</a>
           <a href="#projects" class="btn-secondary">View My Work</a>
+=======
+      <div class="hero-image-container">
+        <img src="/assets/images/gStar SFSU Genentech-46 2.JPG" alt="Abdoulfatah Abdillahi" class="hero-image" />
+        <div class="hero-overlay">
+          <span class="hero-text">CURIOUS. RESEARCHER. ENGINEER.</span>
+>>>>>>> ea949f4 (Complete work page redesign with detailed project pages)
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
+  <!-- About Me Section -->
+  <section id="about" class="section">
     <div class="container">
-      <p>&copy; 2025 Abdoulfatah Abdillahi. All rights reserved.</p>
+      <h2 class="section-title">About Me</h2>
+      
+      <div class="about-layout">
+        <div class="about-text">
+            <div class="about-content">
+              <p>Hello! My name is Abdoulfatah Abdillahi, but most people just call me Abdoul.</p>
+              
+              <p><strong>I'm a researcher passionate about bridging biology and computer science.</strong></p>
+              
+              <p>My work focuses on predicting antibiotic resistance in E. coli using machine learning. Over the past two years at CodeLab, I've helped build a large-scale pangenome dataset and now develop and compare models to better understand how genetic variation shapes resistance patterns.</p>
+              
+              <p>Driven by curiosity and a commitment to impact, I aim to make biological insights more accessible and actionable — transforming complex genomic data into discoveries that matter.</p>
+            </div>
+        </div>
+        
+        <div class="about-image">
+          <img src="/assets/Photos /Abdoul Abdillahi Bridge 2 (1).jpg" alt="Abdoul Abdillahi" class="about-photo" />
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Responsive Nav Toggle Script -->
+  <!-- Journey Section -->
+  <section id="journey" class="section">
+    <div class="container">
+      <div class="journey-intro">
+        <p class="journey-tagline">From Djibouti to data science — a journey of learning, growth, and purpose.</p>
+        <h2 class="section-title">My Journey</h2>
+      </div>
+      
+      <div class="journey-layout">
+        <div class="journey-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2016</span>
+              <div class="timeline-icon">🌍</div>
+            </div>
+            <div class="timeline-content">
+              <h3>From Djibouti to the United States</h3>
+              <p>Began my journey from East Africa to pursue higher education and research opportunities.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2018</span>
+              <div class="timeline-icon">🎓</div>
+            </div>
+            <div class="timeline-content">
+              <h3>Started Northern Essex Community College (NECC)</h3>
+              <p>Began my academic journey in computer science, laying the foundation for my future research.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2019</span>
+              <div class="timeline-icon">🏃</div>
+            </div>
+            <div class="timeline-content">
+              <h3>NECC Cross Country Scholar-Athlete</h3>
+              <p>Balanced academic excellence with competitive athletics, developing discipline and leadership skills.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2021</span>
+              <div class="timeline-icon">🚀</div>
+            </div>
+            <div class="timeline-content">
+              <h3>Transferred to San Francisco State University</h3>
+              <p>Continued my education in computer science, focusing on computational biology and data science.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2023</span>
+              <div class="timeline-icon">🧬</div>
+            </div>
+            <div class="timeline-content">
+              <h3>First Internship at Genentech</h3>
+              <p>Gained hands-on experience in biotechnology and pharmaceutical research.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2023</span>
+              <div class="timeline-icon">🎓</div>
+            </div>
+            <div class="timeline-content">
+              <h3>Graduated with B.S. in Computer Science</h3>
+              <p>Completed undergraduate studies with focus on computational biology applications.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2024</span>
+              <div class="timeline-icon">📊</div>
+            </div>
+            <div class="timeline-content">
+              <h3>Started M.S. in Data Science & AI (SFSU)</h3>
+              <p>Began graduate studies, deepening my expertise in machine learning and artificial intelligence.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2024</span>
+              <div class="timeline-icon">👥</div>
+            </div>
+            <div class="timeline-content">
+              <h3>Peer Mentor - Research Project</h3>
+              <p>Mentored five students in research analyzing antibiotic resistance patterns across European countries using R and CDC data.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2024</span>
+              <div class="timeline-icon">🔬</div>
+            </div>
+            <div class="timeline-content">
+              <h3>Joined CodeLab and began research on E. coli genomics</h3>
+              <p>Started groundbreaking research on antibiotic resistance prediction using machine learning.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="timeline-year">2025</span>
+              <div class="timeline-icon">👨‍🏫</div>
+            </div>
+            <div class="timeline-content">
+              <h3>Graduate Researcher & Mentor</h3>
+              <p>Leading research initiatives while mentoring the next generation of computational biologists.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-photos">
+          <div class="main-photo">
+            <img src="/assets/Photos /CodeTeam.jpg" alt="Research team collaboration" class="journey-main-image" onclick="openPhotoModal('/assets/Photos /CodeTeam.jpg')" />
+            <p class="photo-caption">CodeLab Team at Sacnas</p>
+          </div>
+          
+          <div class="photo-grid">
+            <div class="photo-item" onclick="openPhotoModal('/assets/Photos /Mentor.jpg')">
+              <img src="/assets/Photos /Mentor.jpg" alt="Mentoring students" />
+            </div>
+            <div class="photo-item" onclick="openPhotoModal('/assets/Photos /lab.jpg')">
+              <img src="/assets/Photos /lab.jpg" alt="Laboratory work" />
+            </div>
+            <div class="photo-item" onclick="openPhotoModal('/assets/Photos /IMG_9550.JPG')">
+              <img src="/assets/Photos /IMG_9550.JPG" alt="Research presentation" />
+            </div>
+            <div class="photo-item" onclick="openPhotoModal('/assets/Photos /IMG_9667.JPG')">
+              <img src="/assets/Photos /IMG_9667.JPG" alt="Conference participation" />
+            </div>
+          </div>
+          <div class="photo-single">
+            <div class="photo-item" onclick="openPhotoModal('/assets/Photos /gstar pinc graduation headshots-105.jpg')">
+              <img src="/assets/Photos /gstar pinc graduation headshots-105.jpg" alt="PINC & GSTAR 2024 graduation" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Modal -->
+  <div id="photoModal" class="photo-modal" onclick="closePhotoModal()">
+    <span class="close" onclick="closePhotoModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <!-- JavaScript -->
   <script>
-    const toggleBtn = document.querySelector('.nav-toggle');
-    const navMenu = document.getElementById('main-nav');
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
-    toggleBtn.addEventListener('click', () => {
-      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
-      navMenu.classList.toggle('open');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
     });
-  </script>
 
-  <!-- Energy Project Image Rotator Script -->
-  <script>
-    const energyImages = [
-      "assets/images/Daywise_Energy_Consumption.png",
-      "assets/images/hourly_Energy_consumption.png",
-      "assets/images/variance.png",
-      "assets/images/model_evaluation.png"
-    ];
-    let energyIndex = 0;
-    setInterval(() => {
-      energyIndex = (energyIndex + 1) % energyImages.length;
-      document.getElementById("energy-switcher").src = energyImages[energyIndex];
-    }, 4000);
-  </script>
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+      });
+    });
 
-  <!-- Shopping Trends Image Rotator Script -->
-  <script>
-    const shoppingImages = [
-      "assets/images/product_insight.png",
-      "assets/images/seasonal_purchase.png",
-      "assets/images/Best_sellers_map.png",
-      "assets/images/customer_demographic.png"
-    ];
-    let shoppingIndex = 0;
-    setInterval(() => {
-      shoppingIndex = (shoppingIndex + 1) % shoppingImages.length;
-      document.getElementById("shopping-switcher").src = shoppingImages[shoppingIndex];
-    }, 3000);
-  </script>
-
-  <!-- Educlouds Image Rotator Script -->
-  <script>
-    const educloudsImages = [
-      "assets/images/sumit_request.png",
-      "assets/images/view_request.png",
-      "assets/images/request_result.png",
-      "assets/images/add_request.png",
-      "assets/images/view_resources.png"
-    ];
-    let educloudsIndex = 0;
-    setInterval(() => {
-      educloudsIndex = (educloudsIndex + 1) % educloudsImages.length;
-      document.getElementById("educlouds-switcher").src = educloudsImages[educloudsIndex];
-    }, 3000);
-  </script>
-
-  <!-- Enhanced JavaScript -->
-  <script>
-    // Theme Toggle
-    const toggle = document.getElementById('theme-toggle');
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    if (saved) root.setAttribute('data-theme', saved);
-
-    function setPressed() {
-      const dark = root.getAttribute('data-theme') === 'dark';
-      toggle.setAttribute('aria-pressed', String(dark));
+    // Photo Modal Functions
+    function openPhotoModal(imageSrc) {
+      const modal = document.getElementById('photoModal');
+      const modalImg = document.getElementById('modalImage');
+      
+      // Show the modal
+      modal.style.display = 'block';
+      
+      // Set the image source and add error handling
+      modalImg.src = imageSrc;
+      modalImg.onerror = function() {
+        console.error('Failed to load image:', imageSrc);
+        modal.style.display = 'none';
+      };
+      
+      // Prevent background scrolling
+      document.body.style.overflow = 'hidden';
+      
+      // Add fade-in animation
+      modal.style.opacity = '0';
+      setTimeout(() => {
+        modal.style.opacity = '1';
+        modal.style.transition = 'opacity 0.3s ease';
+      }, 10);
     }
-    setPressed();
 
-    toggle.addEventListener('click', () => {
-      const dark = root.getAttribute('data-theme') === 'dark';
-      const next = dark ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      setPressed();
-    });
-
-    // Skills Animation (removed - using skill levels instead of progress bars)
-
-    // GitHub Stats Integration
-    async function fetchGitHubStats(repo) {
-      try {
-        const response = await fetch(`https://api.github.com/repos/${repo}`);
-        const data = await response.json();
-        return { stars: data.stargazers_count, forks: data.forks_count };
-      } catch (error) {
-        return { stars: 0, forks: 0 };
-      }
+    function closePhotoModal() {
+      const modal = document.getElementById('photoModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
     }
 
-    document.querySelectorAll('[data-repo]').forEach(async (link) => {
-      const repo = link.dataset.repo;
-      const stats = await fetchGitHubStats(repo);
-      const statsSpan = link.querySelector('.repo-stats');
-      if (statsSpan && stats.stars > 0) {
-        statsSpan.textContent = `★ ${stats.stars} | ⑂ ${stats.forks}`;
+    // Close modal when clicking outside the image
+    document.getElementById('photoModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePhotoModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closePhotoModal();
       }
     });
   </script>
-
-  <!-- Floating Theme Toggle -->
-  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
-    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20">
-      <circle cx="10" cy="10" r="5" fill="currentColor"/>
-      <path d="M10 3V1M10 19v-2M17.66 6.34L16.24 4.92M3.76 15.08L2.34 13.66M17 10h2M1 10h2M17.66 13.66L16.24 15.08M3.76 4.92L2.34 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20">
-      <path d="M10 2a8 8 0 108 8 8 8 0 00-8-8z" fill="currentColor"/>
-    </svg>
-  </button>
 </body>
 </html>

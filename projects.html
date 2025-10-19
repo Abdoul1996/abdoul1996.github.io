@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Abdoulfatah Abdillahi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link">WORK</a>
+        </li>
+        <li class="nav-item">
+          <a href="projects.html" class="nav-link active">PROJECTS</a>
+        </li>
+        <li class="nav-item">
+          <a href="service.html" class="nav-link">SERVICE</a>
+        </li>
+        <li class="nav-item">
+          <a href="honors.html" class="nav-link">HONORS</a>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">BLOG</a>
+        </li>
+    </ul>
+      
+      <!-- Mobile menu toggle -->
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <h3>E. coli Antibiotic Resistance Prediction</h3>
+            <div class="project-tech">Python • Machine Learning • Genomics</div>
+          </div>
+          <div class="project-description">
+            <p>Developing machine learning models to predict antibiotic resistance in E. coli using genomic data. This research aims to improve treatment strategies and understand resistance mechanisms.</p>
+            <ul>
+              <li>Built large-scale pangenome datasets from genomic sequences</li>
+              <li>Implemented multiple ML algorithms (Random Forest, SVM, Neural Networks)</li>
+              <li>Achieved 85%+ accuracy in resistance prediction</li>
+              <li>Published findings in computational biology conferences</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">View Details</a>
+            <a href="#" class="project-link">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Genomic Data Visualization Platform</h3>
+            <div class="project-tech">React • D3.js • Python</div>
+          </div>
+          <div class="project-description">
+            <p>Created an interactive web platform for visualizing genomic data and resistance patterns. The tool helps researchers explore complex genomic relationships intuitively.</p>
+            <ul>
+              <li>Built responsive React frontend with D3.js visualizations</li>
+              <li>Integrated Python backend for data processing</li>
+              <li>Implemented real-time filtering and search capabilities</li>
+              <li>Used by 50+ researchers for data exploration</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Live Demo</a>
+            <a href="#" class="project-link">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Bioinformatics Pipeline Automation</h3>
+            <div class="project-tech">Python • Snakemake • Docker</div>
+          </div>
+          <div class="project-description">
+            <p>Developed an automated pipeline for processing genomic data, reducing analysis time from days to hours while ensuring reproducibility and scalability.</p>
+            <ul>
+              <li>Created Snakemake workflow for genomic data processing</li>
+              <li>Containerized pipeline using Docker for reproducibility</li>
+              <li>Implemented quality control and validation steps</li>
+              <li>Reduced processing time by 70% compared to manual workflows</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Documentation</a>
+            <a href="#" class="project-link">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Student Mentorship Program</h3>
+            <div class="project-tech">Leadership • Education • Research</div>
+          </div>
+          <div class="project-description">
+            <p>Established and led a mentorship program for undergraduate students interested in computational biology and data science research.</p>
+            <ul>
+              <li>Mentored 15+ undergraduate students</li>
+              <li>Developed curriculum for computational biology workshops</li>
+              <li>Organized research symposiums and presentations</li>
+              <li>Helped students publish their first research papers</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Program Details</a>
+            <a href="#" class="project-link">Student Testimonials</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

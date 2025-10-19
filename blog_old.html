@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Abdoulfatah Abdillahi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link">WORK</a>
+        </li>
+        <li class="nav-item">
+          <a href="projects.html" class="nav-link">PROJECTS</a>
+        </li>
+        <li class="nav-item">
+          <a href="service.html" class="nav-link">SERVICE</a>
+        </li>
+        <li class="nav-item">
+          <a href="honors.html" class="nav-link">HONORS</a>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link active">BLOG</a>
+        </li>
+    </ul>
+      
+      <!-- Mobile menu toggle -->
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section">
+    <div class="container">
+      <h2 class="section-title">Blog</h2>
+      <p class="blog-intro">Thoughts, insights, and reflections on my journey in computer science, research, and beyond.</p>
+      
+      <div class="blog-content">
+        <article class="blog-post">
+          <div class="blog-header">
+            <h3>HCI Blog Series (1/6) – My Journey Begins</h3>
+            <div class="blog-meta">
+              <time>September 7, 2025</time>
+              <span class="blog-category">Human-Computer Interaction</span>
+            </div>
+          </div>
+          <div class="blog-excerpt">
+            <p>Follow my journey as I explore Human-Computer Interaction principles and apply them to real-world projects, starting with my semester project PathFinder. Discover how HCI is helping me bridge the gap between advanced AI and real-world users.</p>
+          </div>
+          <div class="blog-links">
+            <a href="#blog-post-1" class="blog-link">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-header">
+            <h3>HCI Blog Series (2/6) – Exploring User Research</h3>
+            <div class="blog-meta">
+              <time>September 20, 2025</time>
+              <span class="blog-category">Human-Computer Interaction</span>
+            </div>
+          </div>
+          <div class="blog-excerpt">
+            <p>My process for studying SFSU CS students' planning needs, what surprised me, and how insights shaped PathFinder. Learn about the user research methods I used to understand student pain points in course planning.</p>
+          </div>
+          <div class="blog-links">
+            <a href="#blog-post-2" class="blog-link">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-header">
+            <h3>Machine Learning in Bioinformatics: Predicting E. coli Resistance</h3>
+            <div class="blog-meta">
+              <time>August 15, 2024</time>
+              <span class="blog-category">Machine Learning</span>
+            </div>
+          </div>
+          <div class="blog-excerpt">
+            <p>A deep dive into my research on predicting antibiotic resistance in E. coli using pangenome datasets and deep learning models. Explore the challenges and breakthroughs in applying ML to genomic data.</p>
+          </div>
+          <div class="blog-links">
+            <a href="#research-ml" class="blog-link">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-header">
+            <h3>From Genentech to Graduate Research: My ML Journey</h3>
+            <div class="blog-meta">
+              <time>July 10, 2024</time>
+              <span class="blog-category">Career</span>
+            </div>
+          </div>
+          <div class="blog-excerpt">
+            <p>Reflecting on my internship experience at Genentech and how it shaped my approach to machine learning research. Lessons learned from industry to academia transition.</p>
+          </div>
+          <div class="blog-links">
+            <a href="#genentech-journey" class="blog-link">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-header">
+            <h3>Building a Computational Biology Pipeline: Lessons from CodeLab</h3>
+            <div class="blog-meta">
+              <time>June 5, 2024</time>
+              <span class="blog-category">Research</span>
+            </div>
+          </div>
+          <div class="blog-excerpt">
+            <p>Sharing insights from building large-scale genomic analysis pipelines. From data preprocessing to model deployment, learn about the challenges and solutions in computational biology research.</p>
+          </div>
+          <div class="blog-links">
+            <a href="#codelab-pipeline" class="blog-link">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-header">
+            <h3>From Djibouti to Data Science: My Academic Journey</h3>
+            <div class="blog-meta">
+              <time>May 20, 2024</time>
+              <span class="blog-category">Personal Journey</span>
+            </div>
+          </div>
+          <div class="blog-excerpt">
+            <p>Reflecting on my journey from East Africa to becoming a graduate researcher in the United States. The challenges, opportunities, and lessons learned along the way.</p>
+          </div>
+          <div class="blog-links">
+            <a href="#personal-journey" class="blog-link">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
