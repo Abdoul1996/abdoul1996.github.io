@@ -37,6 +37,14 @@
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
+      
+      <!-- Theme toggle button -->
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle theme">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -1341,6 +1349,46 @@
       if (e.key === 'Escape') {
         closePhotoModal();
       }
+    });
+
+    // Theme toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const body = document.body;
+      
+      // Check for saved theme preference or default to light theme
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      
+      // Apply the saved theme
+      if (currentTheme === 'dark') {
+        body.classList.add('dark-theme');
+      }
+      
+      // Theme toggle event listener
+      themeToggleBtn.addEventListener('click', function() {
+        body.classList.toggle('dark-theme');
+        
+        // Save theme preference
+        const newTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+        localStorage.setItem('theme', newTheme);
+      });
+    });
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+      });
     });
   </script>
 </body>

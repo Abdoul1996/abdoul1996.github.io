@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research - Abdoulfatah Abdillahi</title>
+  <title>My Research - Abdoulfatah Abdillahi</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-  <!-- Navigation -->
+<body class="dark-theme">
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <ul class="nav-menu" id="nav-menu">
@@ -29,77 +29,76 @@
         <li class="nav-item">
           <a href="blog.html" class="nav-link">BLOG</a>
         </li>
-    </ul>
+      </ul>
       
-      <!-- Mobile menu toggle -->
       <div class="nav-toggle" id="nav-toggle">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
+      
+      <!-- Theme toggle button -->
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle theme">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+      </div>
     </div>
   </nav>      
-      <!-- Research Overview Section -->
-      <section class="research">
-        <section id="work" class="section">
-          <div class="container">
+      
+  <section class="research">
+    <div class="container">
+      <!-- DNA Hero Image -->
+      <div class="dna-hero">
+        <img src="assets/Photos /DNA.jpeg" alt="DNA Double Helix" class="dna-image" />
+      </div>
+      
+      <div class="research-content-container">
+        <h1>My Research</h1>
         
-            <section class="research">
-              <h1>My Master's Thesis</h1>
-        
-              <p>
-                My research uses machine learning and deep learning to predict antibiotic resistance in
-                <em>Escherichia coli</em> (<em>E. coli</em>). This project combines large-scale genomic data
-                to understand how genetic variation drives resistance patterns.
-              </p>
-        
-              <h2>Overview</h2>
-              <p>
-                Traditional lab testing is slow and limited to cultivable strains.
-                By applying computational models to genomic data, our goal is to improve prediction speed
-                and accuracy for public health applications.
-              </p>
-        
-              <h3>Problem</h3>
-              <p>
-                Rising antibiotic resistance in <em>E. coli</em> reduces treatment options and increases global health risks.
-                Existing resistance testing is time-consuming, while machine learning enables faster, data-driven insights.
-              </p>
-        
-              <h3>Solution</h3>
-              <p>
-                Our lab built a <strong>pangenome</strong> dataset of <strong>589 E. coli</strong> isolates,
-                covering more than <strong>5.7 million nucleotide positions</strong>.
-                This resource captures both shared and unique genetic regions across strains.
-              </p>
-        
-              <h3>Three Genomic Approaches</h3>
-              <ul>
-                <li><strong>Gene Presence/Absence:</strong> Identifies major resistance genes and virulence factors.</li>
-                <li><strong>SNPs:</strong> Examines point mutations that alter susceptibility.</li>
-                <li><strong>Alignment-based Features:</strong> Captures larger structural variations like insertions or deletions.</li>
-              </ul>
-        
-              <h3>Research Questions</h3>
-              <ul>
-                <li>How well do models trained in one region generalize to others?</li>
-                <li>Does combining multi-country data improve predictive accuracy?</li>
-              </ul>
-            </section>
-        
-          </div>
-        </section>
-        
+        <h2>Thesis: Predicting E. coli Drug Resistance Using Traditional Machine Learning and Deep Learning</h2>
 
+        <p>
+          My research interests revolve around developing computational methods and machine learning and deep learning models to predict antibiotic resistance in <em>E. coli</em>. 
+          Currently, I am working on my thesis, using three different datasets: SNPs, Gene Presence/Absence, and Alignment-based features to predict antibiotic resistance in <em>E. coli</em>.
+        </p>
+  
+        <h3>The Problem</h3>
+        <p>
+          Antibiotic resistance in <em>E. coli</em> is a major global health problem, as it's the most common gram-negative 
+          pathogen affecting humans. Additionally, traditional lab testing is slow and limited to cultivable strains.
+          By applying computational models to genomic data, my goal is build generalizable models that can be used to different drugs to predict resistance.
+  
+        <h3>My Solution & Methods</h3>
+        <p>
+          I am analyzing 600 samples of <em>E. coli</em> across three different datasets, encompassing 5.7 million nucleotide positions and 6,092 genes. 
+          I am experimenting with different machine learning models and comparing their performance to see which one is the bestfor predicting antibiotic resistance in <em>E. coli</em>.
+          My goal is to build a systems that can be used to predict resistance to any drug in bacteria.
+  
+        <h4>Three Datasets</h4>
+        <ul>
+          <li><strong>Gene Presence/Absence:</strong> Identifies major resistance genes and virulence factors.</li>
+          <li><strong>SNPs:</strong> Examines point mutations that alter susceptibility.</li>
+          <li><strong>Alignment-based Features:</strong> Captures larger structural variations like insertions or deletions.</li>
+        </ul>
+  
+        <h4>Core Research Questions</h4>
+        <ul>
+          <li>How does the performance of traditional models trained on pangenome datasets from two countries vary when tested on one dataset from another country? </li>
+          <li>Can models trained on data from multiple countries improve generalizability compared to single-country training? </li>
+          <li>Does combining multi-country data improve predictive accuracy?</li>
+        </ul>
+      </div>
+  
+      <hr style="margin: 2.5rem 0;">
 
-      <!-- Conference Presentations Section -->
       <div class="research-experience">
-        <h3 class="research-section-title">Conference Presentations</h3>
+        <h2 class="research-section-title">Conference Presentations</h2>
         
-        <!-- SACNAS 2024 Research Entry -->
         <article class="research-entry">
           <div class="research-content">
-            <h4 class="research-title">Pangenome Pipeline for Predicting Antibiotic Resistance in E. coli</h4>
+            <h3 class="research-title">Pangenome Pipeline for Predicting Antibiotic Resistance in E. coli</h3>
             <p class="research-subtitle">SACNAS 2024 Conference Presentation</p>
             <p class="research-description">
               Presented a poster on behalf of my research team, showcasing our pipeline for integrating multiple E. coli datasets into a unified pangenome framework and applying machine learning models to predict antibiotic resistance.
@@ -111,28 +110,12 @@
           </div>
         </article>
 
-        <!-- COSE Poster Research Entry -->
         <article class="research-entry">
           <div class="research-content">
-            <h4 class="research-title">Multislice Multimodality Tumor Segmentation</h4>
-            <p class="research-subtitle">COSE Conference Presentation - Computer Science Department</p>
-            <p class="research-description">
-              Developed a U-Net model architecture for brain tumor segmentation using multi-modal MRI data (T1, T2, T1CE, FLAIR). Collaborated with team members to determine the most effective imaging modality and implemented comprehensive tumor classification, advancing medical image analysis for clinical diagnosis.
-            </p>
-            <a href="cose-tumor-segmentation.html" class="learn-more-btn">LEARN MORE</a>
-          </div>
-          <div class="research-poster">
-            <img src="assets/images/COSE_Poster.png" alt="COSE Research Poster" class="poster-image" />
-          </div>
-        </article>
-
-        <!-- TAGC24 Poster Research Entry -->
-        <article class="research-entry">
-          <div class="research-content">
-            <h4 class="research-title">Genomics and Machine Learning in Bacterial Resistance</h4>
+            <h3 class="research-title">Genomics and Machine Learning in Bacterial Resistance</h3>
             <p class="research-subtitle">TAGC24 Conference Presentation</p>
             <p class="research-description">
-              Presented novel computational approaches for analyzing bacterial resistance patterns at TAGC24 conference. Demonstrated the integration of large-scale genomic datasets with machine learning to advance understanding of antibiotic resistance mechanisms in computational genomics.
+              Presented novel computational approaches for analyzing bacterial resistance patterns at the TAGC24 conference. Demonstrated the integration of large-scale genomic datasets with machine learning to advance understanding of antibiotic resistance mechanisms in computational genomics.
             </p>
             <a href="tagc24-research.html" class="learn-more-btn">LEARN MORE</a>
           </div>
@@ -140,12 +123,49 @@
             <img src="assets/images/TAGCC24.png" alt="TAGC24 Research Poster" class="poster-image" />
           </div>
         </article>
+
+        <article class="research-entry">
+          <div class="research-content">
+            <h3 class="research-title">Multislice Multimodality Tumor Segmentation</h3>
+            <p class="research-subtitle">COSE Conference Presentation - Computer Science Department (2023)</p>
+            <p class="research-description">
+              As part of a collaborative project, I developed and implemented a U-Net model architecture for brain tumor segmentation using multi-modal MRI data (T1, T2, T1CE, FLAIR). My work involved determining the most effective imaging modality and implementing comprehensive tumor classification, advancing medical image analysis for clinical diagnosis.
+            </p>
+            <a href="cose-tumor-segmentation.html" class="learn-more-btn">LEARN MORE</a>
+          </div>
+          <div class="research-poster">
+            <img src="assets/images/COSE_Poster.png" alt="COSE Research Poster" class="poster-image" />
+          </div>
+        </article>
       </div>
+
     </div>
   </section>
 
-  <!-- JavaScript -->
   <script>
+    // Theme toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const body = document.body;
+      
+      // Check for saved theme preference or default to light theme
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      
+      // Apply the saved theme
+      if (currentTheme === 'dark') {
+        body.classList.add('dark-theme');
+      }
+      
+      // Theme toggle event listener
+      themeToggleBtn.addEventListener('click', function() {
+        body.classList.toggle('dark-theme');
+        
+        // Save theme preference
+        const newTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+        localStorage.setItem('theme', newTheme);
+      });
+    });
+
     // Mobile navigation toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');

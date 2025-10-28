@@ -37,6 +37,14 @@
     </div>
   </nav>
 
+  <!-- Theme toggle button -->
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle theme">
+      <span class="sun-icon">☀️</span>
+      <span class="moon-icon">🌙</span>
+    </button>
+  </div>
+
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
@@ -236,6 +244,31 @@
 
   <!-- JavaScript -->
   <script>
+    // Theme toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const body = document.body;
+      
+      // Check for saved theme preference or default to light theme
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      
+      // Apply the saved theme
+      if (currentTheme === 'dark') {
+        body.classList.add('dark-theme');
+      }
+      
+      // Theme toggle event listener
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+          body.classList.toggle('dark-theme');
+          
+          // Save theme preference
+          const newTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+    });
+
     // Mobile navigation toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
