@@ -1504,6 +1504,20 @@ footer p {
   text-decoration: underline;
 }
 
+.lab-highlight {
+  color: #0a66ff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+  letter-spacing: 0.03em;
+  display: inline-block;
+}
+
+.lab-highlight:hover {
+  color: #0047c3;
+}
+
 .about-image {
   text-align: center;
 }
@@ -1815,6 +1829,35 @@ footer p {
 
 .research em {
   color: var(--accent-color);
+}
+
+.research .solutions-list {
+  margin: 1.5rem 0 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0;
+}
+
+.research .solutions-list > li {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.research .solutions-sublist {
+  margin: 0.6rem 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  list-style-type: disc;
+}
+
+.impact-note {
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--accent-color);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
 }
 
 /* DNA Hero Image Section */
