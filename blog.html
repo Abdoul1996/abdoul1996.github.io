@@ -11,8 +11,8 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <ul class="nav-menu" id="nav-menu">
-        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-        <li class="nav-item"><a href="research.html" class="nav-link">RESEARCH</a></li>
+        <li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
         <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
         <li class="nav-item"><a href="leadership_award.html" class="nav-link">LEADERSHIP &amp; AWARDS</a></li>
         <li class="nav-item"><a href="blog.html" class="nav-link active">BLOG</a></li>
@@ -30,10 +30,11 @@
       </div>
     </div>
   </nav>
-  " <!-- Blog Section -->
-  <section id="blog" aria-labelledby="blog-heading">
-    <h2 id="blog-heading">Blog</h2>
-    <p>Thoughts, insights, and reflections on my journey in computer science, research, and beyond.</p>
+  <!-- Blog Section -->
+  <section id="blog" class="section blog-section" aria-labelledby="blog-heading">
+    <div class="container blog-container">
+      <h2 id="blog-heading">Blog</h2>
+      <p class="blog-intro">Thoughts, insights, and reflections on my journey in computer science, research, and beyond.</p>
     
     <!-- Blog Series Overview -->
     <div class="blog-series-overview">
@@ -90,7 +91,7 @@
         
         <div class="blog-image">
           <img src="assets/images/Me.jpg" alt="Abdoulfatah Abdillahi in Arizona during SACNAS24 poster presentation" loading="lazy" />
-          <p class="blog-image-caption">Abdoul in Arizona during SACNAS24 poster presentation</p>
+          <p class="blog-image-caption">Presenting my SACNAS 2024 poster in Phoenix, AZ</p>
         </div>
         
         <p>
@@ -108,7 +109,7 @@
         
         <div class="blog-image">
           <img src="assets/images/HCI.png" alt="Human-Computer Interaction diagram showing the relationship between humans, computers, and interaction design" loading="lazy" />
-          <p class="blog-image-caption">Understanding the relationship between humans, computers, and interaction design</p>
+          <p class="blog-image-caption">Human–Computer Interaction framework linking people, systems, and design</p>
         </div>
         
         <p>
@@ -131,7 +132,7 @@
         
         <div class="blog-image">
           <img src="assets/images/ChatGPT.png" alt="ChatGPT interface showing a helpful conversation about machine learning concepts" loading="lazy" />
-          <p class="blog-image-caption">Abdoul ChatGPT home page</p>
+          <p class="blog-image-caption">ChatGPT research workspace used for rapid ideation</p>
         
         <p>
           Have you ever used a tool that made learning feel effortless? That's what happens here. The interface is clean, the conversation flows naturally, and the ability to remember context lowers the "cognitive load" of learning.
@@ -148,7 +149,7 @@
         
         <div class="blog-image">
           <img src="assets/images/slack.png" alt="Slack interface showing threaded conversations and file sharing in a research team context" loading="lazy" />
-          <p class="blog-image-caption">Abdoul Slack home page Interactive with my team to collaborate on research</p>
+          <p class="blog-image-caption">Slack research channels used to coordinate CodeLab collaboration</p>
         </div>
         
         <ul>
@@ -551,24 +552,46 @@
           <span class="nav-subtitle">Coming Soon</span>
         </div>
       </div>
-    </article>"
+    </article>
+    </div>
+  </section>
   <!-- JavaScript -->
   <script>
-    // Mobile navigation toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      const body = document.body;
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const savedTheme = localStorage.getItem('theme') || 'light';
 
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      navToggle.classList.toggle('active');
-    });
+      if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+      }
 
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        navToggle.classList.remove('active');
-      });
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          body.classList.toggle('dark-theme');
+          const newTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      // Mobile navigation toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach((link) => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+          });
+        });
+      }
     });
   </script>
 </body>
