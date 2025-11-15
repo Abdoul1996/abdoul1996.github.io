@@ -1,3 +1,9 @@
+.about .container,
+#about .container {
+  max-width: 1200px;
+  padding: 0 2.5rem;
+}
+
 .entry-card {
   background: var(--bg-secondary);
   border-radius: 12px;
@@ -1535,10 +1541,11 @@ footer p {
 .about-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  max-width: 1000px;
+  gap: 4.5rem;
+  align-items: stretch;
+  max-width: 1050px;
   margin: 0 auto;
+  padding: 0 0.5rem;
 }
 
 .about-text {
@@ -1546,10 +1553,11 @@ footer p {
   line-height: 1.8;
   text-align: left;
   color: var(--text-primary);
+  padding-right: 1rem;
 }
 
 .about-text p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-primary);
@@ -1587,17 +1595,18 @@ footer p {
 .profile-card {
   background: var(--bg-secondary);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 2.5rem;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .profile-image-wrap {
-  width: 320px;
-  height: 320px;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
@@ -1613,7 +1622,9 @@ footer p {
 .profile-links {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  justify-content: center;
+  gap: 0.6rem 1rem;
+  flex-wrap: wrap;
   font-size: 1rem;
   color: var(--text-secondary);
 }
@@ -2470,6 +2481,24 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0;
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+
+  .profile-card {
+    padding: 2rem;
+  }
+
+  .profile-image-wrap {
+    max-width: 100%;
+  }
+
   .project-card {
     flex-direction: column;
     padding: 2rem;
