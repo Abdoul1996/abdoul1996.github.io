@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership & Awards – Abdoulfatah Abdillahi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">RESEARCH</a></li>
+        <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+        <li class="nav-item"><a href="leadership_award.html" class="nav-link active">LEADERSHIP &amp; AWARDS</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+      </ul>
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle theme">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="leadership-awards" class="section">
+    <div class="container">
+      <h2 class="section-title">Leadership, Service & Awards</h2>
+      <p class="section-intro">
+        Selected mentorship, graders, and leadership roles and recognitions that reflect my commitment to guiding STEM students.
+      </p>
+
+      <!-- Leadership / Mentoring Roles -->
+      <h3 class="subsection-title">Mentorship & Leadership</h3>
+
+      <article class="entry-card">
+        <h4 class="entry-title">
+          Grader<span class="entry-period">2024 – 2025</span>
+        </h4>
+        <p class="entry-organization">San Francisco State University</p>
+      
+        <div class="entry-meta-grid">
+          <div class="entry-meta">
+            <span class="entry-meta-label">Courses Supported</span>
+            <ul class="entry-meta-list">
+              <li>CSC 665/865 · Artificial Intelligence</li>
+              <li>CSC 408 · Data Science for Personalized Medicine (Python)</li>
+              <li>CSC 219 · Data Structures for Data Science</li>
+              <li>CSC 101 · Intro to Computing & Programming (Java)</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      
+
+      <article class="entry-card">
+        <h4 class="entry-title">Research Peer Mentor – PINC Summer Program, SFSU <span class="entry-period">Summer 2024</span></h4>
+        <p class="entry-organization">Advisor: Dr. Pleuni Pennings</p>
+        <ul class="entry-bullets">
+          <li>Mentored five undergraduate researchers in R programming and guided them through a full research pipeline on quinolone use & ST131 E. coli across ten European countries.</li>
+          <li>Supported data collection from European CDC & Enterobase and statistical analysis workflow.</li>
+          <li>Presented findings and reinforced that multifactorial approaches are needed to address antibiotic resistance.</li>
+        </ul>
+      </article>
+
+      <!-- Awards & Recognitions -->
+      <h3 class="subsection-title">Awards & Recognitions</h3>
+
+      <article class="entry-card">
+        <h4 class="entry-title">NIH – UCSF/SFSU Bridges to the Doctorate Fellowship <span class="entry-period">2023 – 2025</span></h4>
+        <p class="entry-organization">San Francisco State University</p>
+        <ul class="entry-bullets">
+          <li>Two-year research training fellowship awarded to MS students from underrepresented groups in science to support transition into and completion of biomedical research-focused doctoral programs.</li>
+        </ul>
+      </article>
+
+      <article class="entry-card">
+        <h4 class="entry-title">Additional Scholarships & Recognitions</h4>
+        <p class="entry-organization">San Francisco State University</p>
+        <ul class="entry-bullets">
+          <li>BMC Scholarship, SFSU – Awarded $1,750 for academic excellence (Sept 2024)</li>
+          <li>National Diversity in STEM (NDiSTEM) Travel Scholarship, SACNAS – Full travel support to attend Oct 2024 conference</li>
+          <li>Award of Recognition, SFSU PINC Program – Recognized for service to students and faculty (May 2024)</li>
+          <li>Certificate of Appreciation, SFSU PINC Summer Research Program – Outstanding work as peer mentor (July 2024)</li>
+          <li>CSU-LSAMP Support Award, SFSU – Selected and awarded $500 (2022-2023)</li>
+          <li>Genentech – PINC Fellowship, SFSU – Awarded $4,500 for excellence in computational biology & AI (2022-2023)</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const body = document.body;
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      if (currentTheme === 'dark') body.classList.add('dark-theme');
+      themeToggleBtn.addEventListener('click', function() {
+        body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+      });
+    });
+
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

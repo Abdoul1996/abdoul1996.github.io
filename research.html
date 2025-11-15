@@ -11,33 +11,17 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <ul class="nav-menu" id="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a href="research.html" class="nav-link active">Research</a>
-        </li>
-        <li class="nav-item">
-          <a href="projects.html" class="nav-link">PROJECTS</a>
-        </li>
-        <li class="nav-item">
-          <a href="service.html" class="nav-link">SERVICE</a>
-        </li>
-        <li class="nav-item">
-          <a href="honors.html" class="nav-link">HONORS</a>
-        </li>
-        <li class="nav-item">
-          <a href="blog.html" class="nav-link">BLOG</a>
-        </li>
+        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link active">RESEARCH</a></li>
+        <li class="nav-item"><a href="projects.html" class="nav-link">PROJECTS</a></li>
+        <li class="nav-item"><a href="leadership_award.html" class="nav-link">LEADERSHIP &amp; AWARDS</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
       </ul>
-      
       <div class="nav-toggle" id="nav-toggle">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-      
-      <!-- Theme toggle button -->
       <div class="theme-toggle">
         <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle theme">
           <span class="sun-icon">☀️</span>
@@ -45,89 +29,83 @@
         </button>
       </div>
     </div>
-  </nav>      
-      
+  </nav>
+
   <section class="research">
     <div class="container">
-      <!-- DNA Hero Image -->
       <div class="dna-hero">
         <img src="assets/Photos /DNA.jpeg" alt="DNA Double Helix" class="dna-image" />
       </div>
-      
+
       <div class="research-content-container">
         <h1>My Research</h1>
-        
         <h2>Thesis: Predicting E. coli Drug Resistance Using Traditional Machine Learning and Deep Learning</h2>
 
         <p>
-          My research centers on building computational pipelines and machine learning models that can predict antibiotic
-          resistance in <em>E. coli</em>. For my thesis, I focus on a single antibiotic <strong>Ciprofloxacin(CIP)</strong> and use a 
-          two complementary datasets: gene presence/absence and single-nucleotide polymorphisms (SNPs). The goal is to understand 
-          how specific features influence resistance to CIP and develop predictive models that can identify resistant strains based on their genomics.
+          My research centers on building computational pipelines and machine learning models that can predict antibiotic resistance in <em>E. coli</em>.
+          For my thesis, I focus on a single antibiotic <strong>Ciprofloxacin (CIP)</strong> and use two complementary datasets: gene presence/absence and single-nucleotide polymorphisms (SNPs).
+          The goal is to understand how specific features influence resistance to CIP and develop predictive models that can identify resistant strains based on their genomics.
         </p>
 
         <h2>The Problem</h2>
         <p>
-          Antibiotic-resistant infections pose a serious global health threat. One of the main causes is drug
-          resistant <em>(E. coli)</em>. Usually, testing if a bacterial strain is resistant takes a lot of time in the lab.
-          But, now with faster genome sequencing and machine learning, we can try to predict resistance directly from DNA sequences.
-          The challenge is that an <em>E.coli</em> genome has thousands of genes and mutations, and not all of them are important for resistance.
-          Finding the right signals in all that data is hard task, and that's where machine learning can help.
+          Antibiotic-resistant infections pose a serious global health threat. One of the main causes is drug-resistant <em>E. coli</em>.
+          Typically, testing whether a bacterial strain is resistant takes a lot of time in the lab.
+          With faster genome sequencing and machine learning, we can attempt to predict resistance directly from DNA sequences.
+          The challenge is that an <em>E. coli</em> genome (or shell-genome) contains thousands of genes and mutations — not all of which are important for resistance.
+          Finding the right signals in all that data is a hard task, and that’s where machine learning can help.
         </p>
 
-        <h2>My Solution &amp; Methods</h2>
+        <h2>Methods</h2>
         <p>
-          I tackled this challenge by developing a machine learning pipeline that turns raw genomic data into actionable
-          predictions of antibiotic resistance. My approach leverages complementary genomic feature sets and
-          state-of-the-art ML techniques:
+          I tackled this challenge by developing a machine learning pipeline that turns raw genomic data into actionable predictions of antibiotic resistance.
+          My approach leverages complementary genomic feature sets and modern ML techniques:
         </p>
         <ul class="solutions-list">
-          <li>
-            <strong>Data:</strong> I used whole-genome sequences from 588 <em>E. coli</em> strains, each labeled as <b>Resistant</b> or <b>Susceptible</b> to Ciprofloxacine.
-          </li>
-          <li>
-            <strong>Feature Engineering:</strong> I extracted two types of genomic features to capture different scales
-            of variation:
+          <li><strong>Data:</strong> I used shell-genome data from 588 <em>E. coli</em> strains, each labeled as <b>Resistant</b> or <b>Susceptible</b> to Ciprofloxacin.</li>
+          <li><strong>Feature Engineering:</strong> I extracted two types of genomic features:
             <ul class="solutions-sublist">
-              <li>
-                <em>Gene Presence/Absence Matrix:</em> This dataset contains 6,093 genes and shows whether each gene is present or absent in every strain.
-                These genes mainly come from the shell genome, which includes genes shared by some, but not all strains. Constant features were removed.
-              </li>
-              <li>
-                <em>SNP Variant Profiles:</em> This dataset includes 166,415 <b>single-nucleotide polymorphisms (SNPs)</b> across all strains. SNPs were filtered using 
-                minor allele frequency (MAF) and gap threshold to remove low-quality SNPs.
-              </li>
+              <li><em>Gene Presence/Absence Matrix:</em> 6,093 genes indicating presence/absence across strains. These genes originate from the shell genome (shared by some but not all strains). Constant features were removed.</li>
+              <li><em>SNP Variant Profiles:</em> 166,415 single-nucleotide polymorphisms (SNPs) across all strains. SNPs were filtered using minor allele frequency (MAF) and gap-threshold to remove low-quality variants.</li>
             </ul>
           </li>
-          <li>
-            <strong>Model Training:</strong> With these feature sets, I trained and tuned classification models to
-            predict resistance. I experimented with various machine learning algorithms (e.g. logistic regression,random forests, Random Forest, SVM, etc.) and used rigorous cross-validation to avoid overfitting the high-dimensional data.
-            Handling thousands of genomic features required careful feature selection and regularization to focus the
-            models on the most informative signals.
-          </li>
-          <li>
-            <strong>Evaluation &amp; Comparison:</strong> I evaluated model performance separately using the
-            gene-presence features and the SNP features to compare their predictive power. This analysis revealed which
-            type of genetic signal is more indicative of resistance. I also explored combining both feature types in one
-            model to capture both large-scale and fine-scale genetic factors, aiming for improved overall accuracy and
-            robustness.
-          </li>
+          <li><strong>Model Training:</strong> With these feature sets, I trained and tuned classification models to predict resistance. I experimented with algorithms (logistic regression, random forests, SVM) and used rigorous cross-validation to avoid overfitting high-dimensional data. Feature selection and regularization helped focus on the most informative signals.</li>
+          <li><strong>Evaluation & Comparison:</strong> I assessed model performance separately for gene-presence features and SNP features to compare their predictive power. This revealed which type of genetic signal is more indicative of resistance. I also explored combining both feature types for improved accuracy and robustness.</li>
         </ul>
-        <!-- <p class="impact-note">
-          <strong>Impact:</strong> This project showcases my ability to build real-world ML solutions for complex
-          genomics data. I integrated domain knowledge (genome biology and feature extraction) with data science skills
-          (model development and validation) to create a tool that could potentially predict antibiotic resistance faster
-          than traditional lab tests. In doing so, I demonstrated how raw sequencing data can be transformed into
-          actionable insights, effectively bridging the gap between cutting-edge biology and practical machine learning
-          applications.
-        </p> -->
       </div>
-  
-      <hr style="margin: 2.5rem 0;">
+
+      <!-- Pipeline Diagram Section -->
+      <section class="pipeline-section">
+        <div class="container">
+          <h2>ML Pipeline Overview</h2>
+          <div class="pipeline-embed">
+            <iframe
+              src="https://embed.figma.com/design/aKQWcDJASIELDEdy6gZgSj?node-id=0-1&embed-host=abdoul1996.github.io&hide-ui=1"
+              title="ML Pipeline Diagram"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+            <figcaption class="pipeline-caption">
+              Pipeline summary: From shell-genome data to ML prediction of <strong>Ciprofloxacin (CIP)</strong> resistance.
+            </figcaption>
+          </div>
+          <p class="diagram-link">
+            <a
+              href="https://www.figma.com/make/aKQWcDJASIELDEdy6gZgSj/Research-Pipeline-Creation?node-id=0-1&p=f&t=s5zTKbcVZgJEJvGi-0&fullscreen=1"
+              target="_blank"
+              rel="noopener">
+              View full interactive diagram in Figma
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <hr style="margin: 3rem 0;">
 
       <div class="research-experience">
         <h2 class="research-section-title">Conference Presentations</h2>
-        
+
         <article class="research-entry">
           <div class="research-content">
             <h3 class="research-title">Pangenome Pipeline for Predicting Antibiotic Resistance in E. coli</h3>
@@ -147,7 +125,7 @@
             <h3 class="research-title">Genomics and Machine Learning in Bacterial Resistance</h3>
             <p class="research-subtitle">TAGC24 Conference Presentation</p>
             <p class="research-description">
-              Presented novel computational approaches for analyzing bacterial resistance patterns at the TAGC24 conference. Demonstrated the integration of large-scale genomic datasets with machine learning to advance understanding of antibiotic resistance mechanisms in computational genomics.
+              Presented novel computational approaches for analyzing bacterial resistance patterns at TAGC24. Demonstrated the integration of large-scale genomic datasets with machine learning to advance understanding of antibiotic resistance mechanisms.
             </p>
             <a href="tagc24-research.html" class="learn-more-btn">LEARN MORE</a>
           </div>
@@ -159,9 +137,9 @@
         <article class="research-entry">
           <div class="research-content">
             <h3 class="research-title">Multislice Multimodality Tumor Segmentation</h3>
-            <p class="research-subtitle">COSE Conference Presentation - Computer Science Department (2023)</p>
+            <p class="research-subtitle">COSE Conference Presentation – Computer Science Department (2023)</p>
             <p class="research-description">
-              As part of a collaborative project, I developed and implemented a U-Net model architecture for brain tumor segmentation using multi-modal MRI data (T1, T2, T1CE, FLAIR). My work involved determining the most effective imaging modality and implementing comprehensive tumor classification, advancing medical image analysis for clinical diagnosis.
+              As part of a collaborative project, I developed and implemented a U-Net model architecture for brain tumor segmentation using multi-modal MRI data (T1, T2, T1CE, FLAIR). My work involved identifying the most effective imaging modality and implementing a comprehensive tumor classification workflow, advancing medical image analysis for clinical diagnosis.
             </p>
             <a href="cose-tumor-segmentation.html" class="learn-more-btn">LEARN MORE</a>
           </div>
@@ -169,45 +147,31 @@
             <img src="assets/images/COSE_Poster.png" alt="COSE Research Poster" class="poster-image" />
           </div>
         </article>
+
       </div>
 
     </div>
   </section>
 
   <script>
-    // Theme toggle functionality
     document.addEventListener('DOMContentLoaded', function() {
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
       const body = document.body;
-      
-      // Check for saved theme preference or default to light theme
       const currentTheme = localStorage.getItem('theme') || 'light';
-      
-      // Apply the saved theme
-      if (currentTheme === 'dark') {
-        body.classList.add('dark-theme');
-      }
-      
-      // Theme toggle event listener
+      if (currentTheme === 'dark') body.classList.add('dark-theme');
       themeToggleBtn.addEventListener('click', function() {
         body.classList.toggle('dark-theme');
-        
-        // Save theme preference
         const newTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
         localStorage.setItem('theme', newTheme);
       });
     });
 
-    // Mobile navigation toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
-
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       navToggle.classList.toggle('active');
     });
-
-    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
