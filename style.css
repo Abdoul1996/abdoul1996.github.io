@@ -2735,6 +2735,123 @@ footer p {
 }
 
 /* =========================
+   TABLE STYLING
+   ========================= */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.heuristic-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.heuristic-table thead {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+.heuristic-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.heuristic-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.heuristic-table tbody tr:hover {
+  background: var(--bg-primary);
+}
+
+.heuristic-table td {
+  padding: 1rem;
+  color: var(--text-primary);
+  vertical-align: top;
+}
+
+.heuristic-table td:first-child {
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.heuristic-table td:last-child {
+  font-weight: 600;
+}
+
+.severity-critical {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  background: #fee;
+  color: #c33;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+body.dark-theme .severity-critical {
+  background: #3a1a1a;
+  color: #ff6b6b;
+}
+
+.severity-major {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  background: #ffe6e6;
+  color: #d63384;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+body.dark-theme .severity-major {
+  background: #3a1f2a;
+  color: #ff8cc8;
+}
+
+.severity-medium {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  background: #fff3cd;
+  color: #856404;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+body.dark-theme .severity-medium {
+  background: #3a3320;
+  color: #ffd93d;
+}
+
+@media (max-width: 768px) {
+  .heuristic-table {
+    font-size: 0.85rem;
+  }
+  
+  .heuristic-table th,
+  .heuristic-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .heuristic-table th:first-child,
+  .heuristic-table td:first-child {
+    min-width: 120px;
+  }
+}
+
+/* =========================
    PROJECT CARDS
    ========================= */
 .project-card {

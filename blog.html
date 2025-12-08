@@ -60,10 +60,10 @@
           <a href="#blog-post-4" class="series-title">PathFinder Development</a>
           <span class="series-date">Oct 2025</span>
         </div>
-        <div class="series-item upcoming">
+        <div class="series-item completed">
           <span class="series-number">5</span>
-          <span class="series-title">User Testing & Feedback</span>
-          <span class="series-date">Planned</span>
+          <a href="#blog-post-5" class="series-title">High-Fidelity Prototype & Heuristic Evaluation</a>
+          <span class="series-date">Dec 2025</span>
         </div>
         <div class="series-item upcoming">
           <span class="series-number">6</span>
@@ -591,13 +591,187 @@
         </div>
         <div class="nav-next">
           <span class="nav-label">Next Post</span>
-          <span class="nav-title">User Testing & Feedback</span>
-          <span class="nav-subtitle">Coming Soon</span>
+          <a class="nav-title" href="#blog-post-5">High-Fidelity Prototype & Heuristic Evaluation</a>
         </div>
       </div>
     </article>
+
+    <!-- Blog Post 5 -->
+    <article class="blog-post" id="blog-post-5">
+        <div class="blog-header">
+          <h3>HCI Blog Series (5/6) – PathFinder: High-Fidelity Prototype & Heuristic Evaluation</h3>
+          <div class="blog-meta">
+            <time datetime="2025-12-08" class="blog-date">December 8, 2025</time>
+            <span class="blog-category">Human-Computer Interaction</span>
+          </div>
+          <p class="lede">How I transformed PathFinder from wireframes into a polished prototype, evaluated it against usability heuristics, and refined the design based on systematic findings.</p>
+        </div>
+        <div class="blog-summary" aria-label="Key takeaways for post 5">
+          <p class="blog-summary-title">Key takeaways</p>
+          <ul>
+            <li>Transitioned PathFinder from medium-fidelity wireframes to a polished high-fidelity prototype with realistic UI and interactions.</li>
+            <li>Performed heuristic evaluation to identify usability issues against established usability heuristics.</li>
+            <li>Refined design accordingly: improved visual hierarchy, feedback, consistency, and interaction clarity.</li>
+            <li>Reflected on strengths and limitations, and planned next steps: user testing and further iteration.</li>
+          </ul>
+        </div>
+  
+        <div class="blog-content">
+          <h4>Why High-Fidelity? From Wireframes to Realistic Experience</h4>
+          <p>
+            In Blog 4, I shared how we used paper sketches, low-fidelity and medium-fidelity wireframes to map out PathFinder's core features and navigation. That approach helped us quickly test ideas and iterate, but by its nature it lacked the polish and realism of a final product. High-fidelity prototypes are crucial at this stage — they bridge the gap between design concept and final product, giving stakeholders a realistic preview of look, feel, and interaction.
+          </p>
+  
+          <p>
+            A high-fidelity design matters because it:
+          </p>
+          <ul>
+            <li><strong>Stakeholder Communication:</strong> Gives my team, professor, and potential users a clearer sense of what the final product will look and feel like</li>
+            <li><strong>Accurate Testing:</strong> Enables more realistic usability testing where users can interact with something that closely resembles the final product</li>
+            <li><strong>Early Problem Detection:</strong> Helps catch design flaws, usability issues, and visual inconsistencies before development begins — saving significant time and cost</li>
+          </ul>
+  
+          <h4>1. What Changed: From Medium-Fidelity to High-Fidelity</h4>
+          <p>Using our medium-fidelity design as baseline, I lifted PathFinder into a polished high-fidelity prototype with several significant improvements:</p>
+          <ul>
+            <li><strong>Visual Design & Branding:</strong> Adopted a cohesive purple-gold theme, gradients, shadows, refined typography, and consistent iconography — making the UI look professional and branded rather than raw wireframes.</li>
+            <li><strong>Layout & Visual Hierarchy:</strong> Improved spacing, card-style layouts, and clearer separation of sections. Important elements (like academic summary, GPA, degree progress) became more visually prominent.</li>
+            <li><strong>Enhanced Course Planner & Cards:</strong> Course cards now use color-coding for status/workload/requirements. The Planner interface is cleaner, more structured, and integrates features like adding courses, AI assistant suggestions, and timeline visualization.</li>
+            <li><strong>Interaction Feedback:</strong> Added success/confirmation messages (e.g. “Plan Saved”, “Enrollment Successful”) and smoother interaction transitions — making the app feel more responsive and reliable.</li>
+            <li><strong>Navigation & Consistency:</strong> Standardized icons/buttons, consistent spacing, clear navigation flows (login → dashboard → planner → cart/settings). This reduces cognitive load and makes interface behavior more predictable.</li>
+            <li><strong>Settings & Utility Features:</strong> Cleaned up the Settings screen, structured account settings and tools (transcript upload, resource access), and improved “Save” action clarity.</li>
+          </ul>
+  
+          <div class="blog-image figure-callout">
+            <!-- Placeholder: replace with your medium-fidelity screenshot(s) -->
+            <img src="assets/images/medium-fidelity.png" alt="Medium-Fidelity wireframe of PathFinder" loading="lazy" />
+            <p class="blog-image-caption">Figure 1: Medium-Fidelity Prototype — baseline wireframe before high-fidelity redesign</p>
+          </div>
+  
+          <div class="blog-image figure-callout">
+            <!-- Placeholder: replace with your high-fidelity screenshot(s) -->
+            <img src="assets/images/high-fidelity.png" alt="High-Fidelity PathFinder Dashboard Screen" loading="lazy" />
+            <p class="blog-image-caption">Figure 2: High-Fidelity Prototype — polished Dashboard screen</p>
+          </div>
+  
+          <h4>2. Heuristic Evaluation: Method & Findings</h4>
+          <p>
+            After building the high-fidelity prototype, I conducted a <strong>heuristic evaluation</strong> — a usability inspection method where I systematically reviewed the interface against Nielsen's 10 usability heuristics. This method allows designers to identify usability problems before real users encounter them, making it a cost-effective way to catch issues early.
+          </p>
+  
+          <p>
+            I went through each major screen and feature, asking questions like: "Can users understand what this does?" "Do they get feedback when they take actions?" "Can they easily undo mistakes?" The results were eye-opening — even a polished-looking interface can have significant usability gaps.
+          </p>
+  
+          <h5>Major Usability Issues Identified</h5>
+          <p>
+            Below is a summary of the critical issues I found, organized by the heuristics they violate:
+          </p>
+          <div class="table-wrapper">
+          <table class="heuristic-table">
+            <thead>
+              <tr>
+                <th>Screen / Feature</th>
+                <th>Heuristic Violated</th>
+                <th>Issue</th>
+                <th>Severity / Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Course Planner – schedule generation / save action</td>
+                <td>Visibility of System Status / Feedback</td>
+                <td>No loading/progress indicator or confirmation → user unsure if action succeeded</td>
+                <td><span class="severity-major">Major</span></td>
+              </tr>
+              <tr>
+                <td>Planner / Cart / Research labels & icons</td>
+                <td>Match Between System & Real World / Recognition rather than Recall</td>
+                <td>Terminology confusing ("Planner", "Cart", "Research" unclear), icons unlabeled → first-time users may be disoriented</td>
+                <td><span class="severity-medium">Medium</span></td>
+              </tr>
+              <tr>
+                <td>Key screens navigation (Back / Cancel)</td>
+                <td>User Control & Freedom</td>
+                <td>Some screens lack "Back" or "Cancel," risk of user being trapped if mis-clicked</td>
+                <td><span class="severity-medium">Medium</span></td>
+              </tr>
+              <tr>
+                <td>Settings – file upload / form input</td>
+                <td>Error Prevention / Input Validation</td>
+                <td>No validation or error messages — invalid uploads or inputs might be accepted silently</td>
+                <td><span class="severity-critical">Critical</span></td>
+              </tr>
+              <tr>
+                <td>Planner / Cart screen layout</td>
+                <td>Aesthetic & Minimalist Design / Cognitive load</td>
+                <td>Some screens feel cluttered and dense — too much information overload, may overwhelm users</td>
+                <td><span class="severity-medium">Medium</span></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+  
+          <h4>3. How Design Improved — and What Still Needs Work</h4>
+          <p>Based on the heuristic evaluation, I made several design refinements:</p>
+          <ul>
+            <li>For actions like “Save Plan” or “Generate Schedule,” added loading and confirmation feedback so users know their action has completed.</li>
+            <li>Added labels, tooltips, or short explanatory text for tabs/icons like Planner, Cart, Research — to reduce confusion for first-time users.</li>
+            <li>Ensured each screen has clear navigation (Back/Cancel or home nav) for user control and freedom.</li>
+            <li>For forms and uploads (e.g. transcript upload), plan to include validation and error messages to prevent invalid input or unsupported file types.</li>
+            <li>Simplified layout and visual density on complex screens, increased white space, organized elements logically to reduce cognitive load.</li>
+          </ul>
+  
+          <p>
+            Even after these fixes, there are aspects that still need attention: backend logic and real data integration are absent; error states, edge cases, and accessibility concerns (e.g. color contrast, keyboard navigation) remain untested. Real user testing will be the next critical step to validate design decisions and catch new issues.
+          </p>
+  
+          <h4>4. Reflection: What This Iteration Gave Me — And What's Next</h4>
+          <p>
+            This high-fidelity iteration pushed PathFinder closer to a "real app." The polished UI, realistic flows, feedback messages, and structured layout give a strong sense of how the final product might feel. It's incredibly rewarding to see something that started as rough paper sketches evolve into a near-finished UI mock-up that I'm genuinely proud of.
+          </p>
+  
+          <p>
+            But this process also reminded me that design isn't just about aesthetics. Usability, clarity, feedback, and user control are equally important — and sometimes easier to overlook when you're focused on making things look beautiful. The heuristic evaluation was humbling; it helped catch issues I might not have noticed otherwise, even after spending hours refining the visual design.
+          </p>
+  
+          <p>
+            One key lesson: <strong>beauty and usability must work together</strong>. A gorgeous interface that confuses users is a failure, just as a functional but ugly interface fails to engage. The best designs balance both — and that balance requires constant evaluation and iteration.
+          </p>
+  
+          <p>
+            For next steps, I plan to conduct <strong>user testing with real students</strong> — freshmen, transfers, seniors — to observe how they navigate PathFinder in real scenarios. I want to see whether the labels, navigation, and flow make intuitive sense, and I'm prepared to note any usability issues or confusion that emerge. Based on that feedback, I'll iterate further: clean up layouts, refine language, fix edge cases, and improve accessibility. Eventually, this prototype could serve as a reference for development handoff, or as an anchor for more formal usability testing.
+          </p>
+  
+          <p>
+            The comparison between our medium and high-fidelity prototypes shows a dramatic transformation — from functional wireframes to a polished, branded interface that feels ready for real users. However, the heuristic evaluation reminded me that visual polish alone isn't enough; usability must be baked into every interaction.
+          </p>
+  
+          <h4>Final Thoughts</h4>
+          <p>
+            This phase of PathFinder development reinforced one core lesson in HCI design: prototyping and evaluation must go hand-in-hand. A beautiful interface means little if users can’t understand or navigate it. By combining high-fidelity prototyping with heuristic evaluation, we’re able to catch usability issues early and refine design before investing in code or major development.
+          </p>
+          <blockquote class="blog-quote">
+            <p>Design isn’t finished when it looks good — it’s finished when it works well for the user.</p>
+          </blockquote>
+  
+        </div>
+  
+        <div class="blog-navigation">
+          <div class="nav-previous">
+            <span class="nav-label">Previous Post</span>
+            <a class="nav-title" href="#blog-post-4">PathFinder Development (Medium-Fi Stage)</a>
+          </div>
+          <div class="nav-next">
+            <span class="nav-label">Next Post</span>
+            <span class="nav-title">Final Reflections</span>
+            <span class="nav-subtitle">Coming Soon</span>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
+  
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
