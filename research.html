@@ -40,38 +40,116 @@
       <div class="research-content-container">
         <h1>My Research</h1>
         <h2>Thesis: Predicting E. coli Drug Resistance Using Traditional Machine Learning and Deep Learning</h2>
+        <p class="thesis-meta"><em>M.S. Thesis, San Francisco State University — defended May 2026</em></p>
+        <div class="thesis-links">
+          <a href="assets/pdfs/Abdoulfatah_Abdillahhi_Thesis.pdf" class="thesis-link-btn" target="_blank" rel="noopener">
+            Read the Thesis (PDF)
+          </a>
+          <a href="assets/pdfs/Abdoul_thesis_presentation.pdf" class="thesis-link-btn thesis-link-btn-secondary" target="_blank" rel="noopener">
+            Defense Presentation
+          </a>
+        </div>
 
         <p>
-          My research centers on building computational pipelines and machine learning models that can predict antibiotic resistance in <em>E. coli</em>.
-          For my thesis, I focus on a single antibiotic <strong>Ciprofloxacine (CIP)</strong> and use two complementary datasets: gene presence/absence and single-nucleotide polymorphisms (SNPs).
-          The goal is to understand how specific features influence resistance to CIP and develop predictive models that can identify resistant strains based on their genomics.
+          My thesis investigated how machine learning can predict antibiotic resistance in <em>E. coli</em> directly from its genome.
+          I focused on <strong>Ciprofloxacin (CIP)</strong> — a critical fluoroquinolone antibiotic with rising resistance globally — and built an end-to-end ML pipeline on 588 clinical <em>E. coli</em> isolates from three published studies.
+        </p>
+        <p>
+          The work compared two genomic feature representations derived from the same isolates: a <strong>gene presence/absence matrix</strong> (capturing horizontally acquired resistance) and a <strong>single-nucleotide polymorphism (SNP) matrix</strong> (capturing chromosomal mutations).
+          I benchmarked five classical machine learning models against a retrieval-augmented deep learning model (<strong>TabR</strong>) on both representations, achieving <strong>0.94 balanced accuracy</strong> and <strong>0.989 ROC-AUC</strong> on a held-out test set.
         </p>
 
         <h2>The Problem</h2>
         <p>
-          Antibiotic-resistant infections pose a serious global health threat. One of the main causes is drug-resistant <em>E. coli</em>.
-          Typically, testing whether a bacterial strain is resistant takes a lot of time in the lab.
-          With faster genome sequencing and machine learning, we can attempt to predict resistance directly from DNA sequences.
-          The challenge is that an <em>E. coli</em> genome (or shell-genome) contains thousands of genes and mutations — not all of which are important for resistance.
-          Finding the right signals in all that data is a hard task, and that’s where machine learning can help.
+          Antibiotic resistance causes more than <strong>1 million deaths each year worldwide</strong>. <em>E. coli</em> is one of the most common drug-resistant pathogens, responsible for urinary tract and bloodstream infections.
+          <strong>Ciprofloxacin</strong> — a key treatment for these infections — is increasingly losing effectiveness as resistance spreads.
+        </p>
+        <p>
+          The standard way to test resistance requires growing bacteria in the lab and can delay appropriate treatment.
+          Whole-genome sequencing offers a faster path: predict resistance directly from the genome.
+          But an <em>E. coli</em> genome contains thousands of genes and tens of thousands of mutations, only a small fraction of which actually drive resistance.
+        </p>
+        <p>
+          My thesis asked: <strong>which genomic features best predict resistance, and how should they be represented for machine learning?</strong>
         </p>
 
         <h2>Methods</h2>
         <p>
-          I tackled this challenge by developing a machine learning pipeline that turns raw genomic data into actionable predictions of antibiotic resistance.
-          My approach leverages complementary genomic feature sets and modern ML techniques:
+          I built an end-to-end ML pipeline that turns raw bacterial genomes into resistance predictions.
+          The work used <strong>588 clinical <em>E. coli</em> isolates</strong> from three published bloodstream-infection studies (England, Norway, and a US military healthcare network), each labeled <b>Resistant</b> or <b>Susceptible</b> to Ciprofloxacin based on <strong>EUCAST clinical breakpoints</strong>.
+        </p>
+
+        <h3 class="methods-subhead">Pipeline overview</h3>
+        <p>
+          Starting from the 588 isolates, a pangenome was constructed and categorized into <strong>core</strong>, <strong>soft-core</strong>, and <strong>shell</strong> genes.
+          A reference shell genome was generated from these categories and used as the alignment anchor for <strong>Snippy</strong> variant calling, producing a core genome alignment across all isolates.
+        </p>
+        <p>
+          From this single alignment, I derived two genomic feature representations in parallel:
         </p>
         <ul class="solutions-list">
-          <li><strong>Data:</strong> I used shell-genome data from 588 <em>E. coli</em> strains, each labeled as <b>Resistant</b> or <b>Susceptible</b> to Ciprofloxacin.</li>
-          <li><strong>Feature Engineering:</strong> I extracted two types of genomic features:
-            <ul class="solutions-sublist">
-              <li><em>Gene Presence/Absence Matrix:</em> 6,093 genes indicating presence/absence across strains. These genes originate from the shell genome (shared by some but not all strains). Constant features were removed.</li>
-              <li><em>SNP Variant Profiles:</em> 166,415 single-nucleotide polymorphisms (SNPs) across all strains. SNPs were filtered using minor allele frequency (MAF) and gap-threshold to remove low-quality variants.</li>
-            </ul>
-          </li>
-          <li><strong>Model Training:</strong> With these feature sets, I trained and tuned classification models to predict resistance. I experimented with algorithms (logistic regression, random forests, SVM) and used rigorous cross-validation to avoid overfitting high-dimensional data. Feature selection and regularization helped focus on the most informative signals.</li>
-          <li><strong>Evaluation & Comparison:</strong> I assessed model performance separately for gene-presence features and SNP features to compare their predictive power. This revealed which type of genetic signal is more indicative of resistance. I also explored combining both feature types for improved accuracy and robustness.</li>
+          <li><strong>SNP Matrix.</strong> Extracted single-nucleotide polymorphism positions from the alignment, filtered by minor allele frequency (MAF ≥ 0.05) and gap proportion (≤ 10%). One-hot encoding multi-allelic positions produced a <strong>588 × 67,259</strong> feature matrix, capturing chromosomal mutations.</li>
+          <li><strong>Gene Presence/Absence Matrix.</strong> Designed a coordinate-mapping algorithm to slice the alignment into per-gene regions using cumulative gene lengths from the reference. Each gene was encoded as present or absent per isolate based on gap proportion. After filtering constant features, this yielded a <strong>588 × 3,625</strong> binary matrix, capturing horizontally acquired resistance.</li>
         </ul>
+
+        <h3 class="methods-subhead">Modeling</h3>
+        <ul class="solutions-list">
+          <li><strong>Feature Selection.</strong> Applied <em>Mutual Information</em> for the SNP dataset (42,178 informative features retained) and <em>Mutual Information + MultiSURF</em> for the GPA dataset (2,946 informative genes retained).</li>
+          <li><strong>Models.</strong> Benchmarked five classical models — Decision Tree, Random Forest, XGBoost, K-Nearest Neighbors, Logistic Regression — against <strong>TabR</strong>, a retrieval-augmented deep learning architecture for tabular data.</li>
+          <li><strong>Training &amp; Evaluation.</strong> Stratified 80/20 train-test split (470 train, 118 test). Hyperparameters tuned with <strong>Optuna</strong> (TPE sampler, 100 trials per model per fold) under <strong>3-fold stratified cross-validation</strong>, optimizing balanced accuracy to account for the mild class imbalance (53% susceptible vs. 47% resistant).</li>
+        </ul>
+
+        <h2>Key Results</h2>
+        <p>
+          Three findings stood out from the model evaluation, summarized in the figures below.
+        </p>
+
+        <h3 class="methods-subhead">Gene presence/absence outperformed SNP features</h3>
+        <p>
+          Models trained on the GPA matrix achieved higher and more consistent performance than those trained on the SNP matrix.
+          Random Forest on GPA features achieved the best overall result: <strong>0.94 balanced accuracy, 0.94 F1, and 0.99 ROC-AUC</strong> on the held-out test set (n = 118).
+        </p>
+        <figure class="results-figure-pair">
+          <div class="results-figure-grid">
+            <img src="assets/images/research/snp_heatmap.png" alt="SNP dataset model performance heatmap" class="results-figure-img" />
+            <img src="assets/images/research/gpa_heatmap.png" alt="GPA dataset model performance heatmap" class="results-figure-img" />
+          </div>
+          <figcaption class="results-figure-caption">
+            Test-set performance across six metrics for all classical models on the SNP dataset (left) and GPA dataset (right). Darker shading indicates stronger performance.
+          </figcaption>
+        </figure>
+
+        <h3 class="methods-subhead"><em>parC</em> and <em>gyrA</em> dominated SNP signal; GPA signal was more distributed</h3>
+        <p>
+          Feature importance analysis revealed strikingly different biological patterns between the two representations.
+          In the SNP dataset, three variants in <strong><em>parC</em></strong> and <strong><em>gyrA</em></strong> dominated the rankings — consistent with the well-established role of chromosomal mutations in these quinolone resistance-determining regions.
+          The GPA dataset showed a broader, more distributed set of informative genes, with substantial overlap between Mutual Information and MultiSURF rankings (13 of top 20 shared).
+        </p>
+        <figure class="results-figure-pair">
+          <div class="results-figure-grid">
+            <img src="assets/images/research/Top_SNP_Feature2_updated.png" alt="Top 20 SNP features by Mutual Information" class="results-figure-img" />
+            <img src="assets/images/research/gene_feature_selection.png" alt="Top 20 GPA features by Mutual Information and MultiSURF" class="results-figure-img" />
+          </div>
+          <figcaption class="results-figure-caption">
+            Top 20 features by Mutual Information for SNP (left) and GPA (right) datasets. <em>parC</em> and <em>gyrA</em> SNPs (left) showed substantially higher MI scores than other features; GPA features (right) were more uniformly distributed.
+          </figcaption>
+        </figure>
+
+        <h3 class="methods-subhead">Classical ML outperformed deep learning at this scale</h3>
+        <p>
+          Across both feature representations, classical machine learning models outperformed the retrieval-augmented deep learning model (TabR) on threshold-dependent metrics.
+          On the SNP dataset, Decision Tree beat TabR by 4.4 points in balanced accuracy; on GPA, Random Forest beat TabR by 1.8 points.
+          ROC-AUC differences were small, suggesting comparable ranking ability — but at the 588-isolate scale, deep learning provided no measurable advantage over well-tuned classical methods.
+        </p>
+        <figure class="results-figure-pair">
+          <div class="results-figure-grid">
+            <img src="assets/images/research/snp_dot_comparison.png" alt="SNP dataset: classical models vs TabR" class="results-figure-img" />
+            <img src="assets/images/research/gpa_dot_comparison.png" alt="GPA dataset: classical models vs TabR" class="results-figure-img" />
+          </div>
+          <figcaption class="results-figure-caption">
+            Test-set performance of best classical models vs. TabR on the SNP dataset (left) and GPA dataset (right). Classical models outperformed TabR on both representations.
+          </figcaption>
+        </figure>
       </div>
 
       <!-- Pipeline Diagram Section -->
