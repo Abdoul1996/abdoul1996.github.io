@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="dark-theme">
+<body>
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <ul class="nav-menu" id="nav-menu">
@@ -33,12 +33,16 @@
 
   <section class="research">
     <div class="container">
-      <div class="dna-hero">
-        <img src="assets/Photos/DNA.jpeg" alt="DNA Double Helix" class="dna-image" />
-      </div>
+      <nav class="research-toc" aria-label="Section navigation">
+        <a href="#overview" class="research-toc-link">Overview</a>
+        <a href="#problem" class="research-toc-link">Problem</a>
+        <a href="#methods" class="research-toc-link">Methods</a>
+        <a href="#results" class="research-toc-link">Results</a>
+        <a href="#conferences" class="research-toc-link">Conferences</a>
+      </nav>
 
       <div class="research-content-container">
-        <h1>My Research</h1>
+        <h1 id="overview">My Research</h1>
         <h2>Thesis: Predicting E. coli Drug Resistance Using Traditional Machine Learning and Deep Learning</h2>
         <p class="thesis-meta"><em>M.S. Thesis, San Francisco State University — defended May 2026</em></p>
         <div class="thesis-links">
@@ -59,7 +63,7 @@
           I benchmarked five classical machine learning models against a retrieval-augmented deep learning model (<strong>TabR</strong>) on both representations, achieving <strong>0.94 balanced accuracy</strong> and <strong>0.989 ROC-AUC</strong> on a held-out test set.
         </p>
 
-        <h2>The Problem</h2>
+        <h2 id="problem">The Problem</h2>
         <p>
           Antibiotic resistance causes more than <strong>1 million deaths each year worldwide</strong>. <em>E. coli</em> is one of the most common drug-resistant pathogens, responsible for urinary tract and bloodstream infections.
           <strong>Ciprofloxacin</strong> — a key treatment for these infections — is increasingly losing effectiveness as resistance spreads.
@@ -73,13 +77,21 @@
           My thesis asked: <strong>which genomic features best predict resistance, and how should they be represented for machine learning?</strong>
         </p>
 
-        <h2>Methods</h2>
+        <h2 id="methods">Methods</h2>
         <p>
           I built an end-to-end ML pipeline that turns raw bacterial genomes into resistance predictions.
           The work used <strong>588 clinical <em>E. coli</em> isolates</strong> from three published bloodstream-infection studies (England, Norway, and a US military healthcare network), each labeled <b>Resistant</b> or <b>Susceptible</b> to Ciprofloxacin based on <strong>EUCAST clinical breakpoints</strong>.
         </p>
 
         <h3 class="methods-subhead">Pipeline overview</h3>
+        <figure class="pipeline-figure">
+          <a href="assets/images/research/pipeline.png" target="_blank" rel="noopener" class="pipeline-figure-link" aria-label="Open pipeline diagram at full size">
+            <img src="assets/images/research/pipeline.png" alt="SNP and GPA pipeline diagram: input matrices, classical and deep learning models, prediction, and evaluation metrics" class="pipeline-figure-img" />
+          </a>
+          <figcaption class="pipeline-figure-caption">
+            Parallel SNP and GPA pipelines: each feature matrix passes through five classical models and the TabR deep learning model, producing Resistant/Susceptible predictions evaluated on balanced accuracy, F1, and ROC-AUC.
+          </figcaption>
+        </figure>
         <p>
           Starting from the 588 isolates, a pangenome was constructed and categorized into <strong>core</strong>, <strong>soft-core</strong>, and <strong>shell</strong> genes.
           A reference shell genome was generated from these categories and used as the alignment anchor for <strong>Snippy</strong> variant calling, producing a core genome alignment across all isolates.
@@ -99,7 +111,7 @@
           <li><strong>Training &amp; Evaluation.</strong> Stratified 80/20 train-test split (470 train, 118 test). Hyperparameters tuned with <strong>Optuna</strong> (TPE sampler, 100 trials per model per fold) under <strong>3-fold stratified cross-validation</strong>, optimizing balanced accuracy to account for the mild class imbalance (53% susceptible vs. 47% resistant).</li>
         </ul>
 
-        <h2>Key Results</h2>
+        <h2 id="results">Key Results</h2>
         <p>
           Three findings stood out from the model evaluation, summarized in the figures below.
         </p>
@@ -152,78 +164,61 @@
         </figure>
       </div>
 
-      <!-- Pipeline Diagram Section -->
-      <section class="pipeline-section">
-        <div class="container">
-          <h2>ML Pipeline Overview</h2>
-          <div class="pipeline-embed">
-            <iframe
-              src="https://embed.figma.com/design/aKQWcDJASIELDEdy6gZgSj?node-id=0-1&embed-host=abdoul1996.github.io&hide-ui=1"
-              title="ML Pipeline Diagram"
-              frameborder="0"
-              allowfullscreen
-              loading="lazy">
-            </iframe>
-            <figcaption class="pipeline-caption">
-              Pipeline summary: From shell-genome data to ML prediction of <strong>Ciprofloxacin (CIP)</strong> resistance.
-            </figcaption>
-          </div>
-          <p class="diagram-link">
-            <a
-              href="https://www.figma.com/make/aKQWcDJASIELDEdy6gZgSj/Research-Pipeline-Creation?node-id=0-1&p=f&t=s5zTKbcVZgJEJvGi-0&fullscreen=1"
-              target="_blank"
-              rel="noopener"
-              aria-label="Open full interactive diagram in Figma">
-              View in Figma
-            </a>
-          </p>
-        </div>
-      </section>
-
-      <hr style="margin: 3rem 0;">
+      <div class="section-divider" id="conferences">
+        <span class="section-divider-label">Other Research</span>
+      </div>
 
       <div class="research-experience">
         <h2 class="research-section-title">Conference Presentations</h2>
 
         <article class="research-entry">
           <div class="research-content">
+            <span class="research-year-tag">2024</span>
             <h3 class="research-title">Pangenome Pipeline for Predicting Antibiotic Resistance in E. coli</h3>
-            <p class="research-subtitle">SACNAS 2024 Conference Presentation</p>
+            <p class="research-subtitle">SACNAS National Conference, October 2024 — CodeLab, SF State University</p>
             <p class="research-description">
-              Presented a poster on behalf of my research team, showcasing our pipeline for integrating multiple E. coli datasets into a unified pangenome framework and applying machine learning models to predict antibiotic resistance.
+              Team poster presentation on early-stage pangenome framework development. Contributed to dataset integration and pangenome construction across three published <em>E. coli</em> studies (Mills, Gladstone, Kalloneen). The poster outlined our planned approach to combining SNP and gene presence/absence features for cross-dataset antibiotic resistance prediction.
             </p>
-            <a href="sacnas-2024-research.html" class="learn-more-btn">LEARN MORE</a>
+            <p class="research-role"><strong>My role:</strong> Co-developer of bioinformatics pipeline and poster presenter on behalf of the team.</p>
           </div>
           <div class="research-poster">
-            <img src="assets/images/sacnas24.png" alt="SACNAS 2024 Research Poster" class="poster-image" />
+            <a href="assets/images/sacnas24.png" target="_blank" rel="noopener" class="poster-link" aria-label="Open SACNAS 2024 poster at full size">
+              <img src="assets/images/sacnas24.png" alt="SACNAS 2024 Research Poster" class="poster-image" />
+            </a>
           </div>
         </article>
 
         <article class="research-entry">
           <div class="research-content">
-            <h3 class="research-title">Genomics and Machine Learning in Bacterial Resistance</h3>
-            <p class="research-subtitle">TAGC24 Conference Presentation</p>
+            <span class="research-year-tag">2024</span>
+            <h3 class="research-title">Comparing VAE and CNN Architectures for Bacterial Resistance Prediction</h3>
+            <p class="research-subtitle">TAGC24 Conference — March 2024, Washington DC</p>
             <p class="research-description">
-              Presented novel computational approaches for analyzing bacterial resistance patterns at TAGC24. Demonstrated the integration of large-scale genomic datasets with machine learning to advance understanding of antibiotic resistance mechanisms.
+              Team poster comparing variational autoencoder (VAE) and convolutional neural network (CNN) architectures for predicting antibiotic resistance from <em>E. coli</em> genomes converted into image format. The work benchmarked 501 strains and tested whether image-based deep learning could match traditional sequence-based approaches.
             </p>
-            <a href="tagc24-research.html" class="learn-more-btn">LEARN MORE</a>
+            <p class="research-role"><strong>My role:</strong> Contributed to the VAE pipeline alongside a teammate; other teammates implemented the CNN comparison and additional models.</p>
           </div>
           <div class="research-poster">
-            <img src="assets/images/TAGCC24.png" alt="TAGC24 Research Poster" class="poster-image" />
+            <a href="assets/images/TAGCC24.png" target="_blank" rel="noopener" class="poster-link" aria-label="Open TAGC24 poster at full size">
+              <img src="assets/images/TAGCC24.png" alt="TAGC24 Research Poster" class="poster-image" />
+            </a>
           </div>
         </article>
 
         <article class="research-entry">
           <div class="research-content">
+            <span class="research-year-tag">2023</span>
             <h3 class="research-title">Multislice Multimodality Tumor Segmentation</h3>
-            <p class="research-subtitle">COSE Conference Presentation – Computer Science Department (2023)</p>
+            <p class="research-subtitle">COSE Conference — 2023, SFSU College of Science &amp; Engineering</p>
             <p class="research-description">
-              As part of a collaborative project, I developed and implemented a U-Net model architecture for brain tumor segmentation using multi-modal MRI data (T1, T2, T1CE, FLAIR). My work involved identifying the most effective imaging modality and implementing a comprehensive tumor classification workflow, advancing medical image analysis for clinical diagnosis.
+              Brain tumor segmentation from multi-modal MRI scans (T1, T2, T1CE, FLAIR) using a <strong>U-Net</strong> deep learning framework trained on the <strong>BraTS</strong> dataset. The project evaluated the relative effectiveness of each MRI sequence for classifying tumor subregions — enhancing tumor, non-enhancing tumor, and peritumoral edema — to inform multi-modal fusion strategies for clinical segmentation pipelines.
             </p>
-            <a href="cose-tumor-segmentation.html" class="learn-more-btn">LEARN MORE</a>
+            <p class="research-role"><strong>My role:</strong> Designed and implemented the U-Net architecture and multi-modal preprocessing pipeline; conducted comparative modality analysis with teammates Brandon Bahr Maravilla and Yoonji Lee under Dr. Ilmi Yoon.</p>
           </div>
           <div class="research-poster">
-            <img src="assets/images/COSE_Poster.png" alt="COSE Research Poster" class="poster-image" />
+            <a href="assets/images/COSE_Poster.png" target="_blank" rel="noopener" class="poster-link" aria-label="Open COSE poster at full size">
+              <img src="assets/images/COSE_Poster.png" alt="COSE Research Poster" class="poster-image" />
+            </a>
           </div>
         </article>
 
