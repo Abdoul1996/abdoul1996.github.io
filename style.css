@@ -69,6 +69,62 @@
     font-size: 1.6rem;
   }
 }
+
+/* Structured awards list: date column + content column */
+.awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.award-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.award-row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.award-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: 0.3px;
+  padding-top: 0.1rem;
+}
+
+.award-body {
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.award-body strong {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.award-body p {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .award-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .award-date {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+}
 /* =========================
    Abdoulfatah Abdillahi Portfolio CSS
    ========================= */
@@ -1573,6 +1629,49 @@ footer p {
 
 .about-text a:hover {
   text-decoration: underline;
+}
+
+/* "Currently open to roles" availability note */
+.availability-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 999px;
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  color: var(--text-primary);
+  margin: 0.5rem 0 1.5rem !important;
+}
+
+.availability-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10b981;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  animation: availability-pulse 2s ease-out infinite;
+}
+
+@keyframes availability-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .availability-dot {
+    animation: none;
+  }
 }
 
 .lab-highlight {
