@@ -2289,11 +2289,8 @@ footer p {
 
 /* Inline pipeline figure (lives inside Methods → Pipeline overview) */
 .pipeline-figure {
-  margin: 1rem 0 2.5rem;
-  width: min(1100px, 95vw);
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 1rem auto 2.5rem;
+  width: min(520px, 90vw);
 }
 
 .pipeline-figure-link {
